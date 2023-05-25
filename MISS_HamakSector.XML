@@ -1,0 +1,2358 @@
+<!-- HAVOK IN THE HAMAK SECTOR -->
+<!-- by Mike Substelny -->
+<mission_data version="2.8" background_id_arme="" playerShipNames_arme="Artemis\Intrepid\Aegis\Horatio\Excalibur\Hera\Ceres\Diana">
+  <mission_description>This mission pits your intrepid crew against the evil forces of... greedy capitalists? The Hamak Sector is full of interesting characters, new gadgets, and shady deals. But every cadet knows that unidentified tachyon sources always indicate one thing: TROUBLE! Can your crew uncover what's really going on in the Hamak Sector?^^Full crew of six experienced players recommended. </mission_description>
+  <!-- ************************************************************ -->
+  <!-- The Start block creates everything that exists in the Hamak Sector -->
+  <!-- the moment the mission starts -->
+  <start name="Havoc  in the Hamak Sector 2.8">
+    <!-- Players start in the lower left corner of the 100,000 x 100,000 sector -->
+    <create type="player" player_slot="0" x="88000" y="0" z="85300" angle="85" sideValue="2" accent_color="30" raceKeys="TSN player" hullKeys="Battleship" warp="yes" jump="no" />
+    <!--<create type="player" player_slot="0" x="13000.0" y="0" z="80000.0" angle="85" sideValue="2" accent_color="30" raceKeys="TSN player" hullKeys="Battleship" warp="yes" jump="no" />-->
+    <create type="station" x="12000" y="0" z="80000" name="Hamak Base" hullID="1000" sideValue="2" />
+    <set_object_property property="canBuild" value="0" name="Hamak Base" />
+    <set_object_property property="missileStoresNuke" value="0" name="Hamak Base" />
+    <set_object_property property="missileStoresMine" value="0" name="Hamak Base" />
+    <set_object_property property="missileStoresHoming" value="0" name="Hamak Base" />
+    <set_object_property property="missileStoresEMP" value="0" name="Hamak Base" />
+    <set_object_property property="missileStoresPShock" value="0" name="Hamak Base" />
+    <set_object_property property="missileStoresTag" value="0" name="Hamak Base" />
+    <set_object_property property="missileStoresProbe" value="0" name="Hamak Base" />
+    <set_object_property property="missileStoresBeacon" value="0" name="Hamak Base" />
+    <clear_player_station_carried name="Hamak Base" />
+    <create type="neutral" x="35000" y="0" z="40000" angle="155" name="GW Unlimited 214" hullID="1503" sideValue="2" />
+    <set_special name="GW Unlimited 214" ship="0" captain="0" />
+    <add_ai type="POINT_THROTTLE" value1="12000" value2="0" value3="80000" value4="1" name="GW Unlimited 214" />
+    <set_ship_text name="GW Unlimited 214" race="Hamak Syndicate" class="Upgraded Cargo Carrier" desc="Cargo hold contains rare crystals, tobacco products, and large quantities of alcohol." />
+    <create type="neutral" x="59000" y="0" z="18500" angle="0" name="Warsaw" hullID="1501" sideValue="2" />
+    <set_ship_text name="Warsaw" race="TSN" class="Heavy Destroyer" desc="Captain Amelia Haynes commanding" scan_desc="Library Computer: Captain Haynes was reprimanded for being overly aggressive at the battle of Helix Aquarius." />
+    <set_special name="Warsaw" ship="0" captain="5" />
+    <add_ai type="POINT_THROTTLE" value1="59000" value2="0" value3="1600" value4="1" name="Warsaw" />
+    <create type="neutral" x="11990" y="0" z="80010" angle="175" name="Acme Arms Dealer" hullID="1503" sideValue="2" />
+    <clear_ai name="Acme Arms Dealer" />
+    <add_ai type="POINT_THROTTLE" value1="12000" value2="0" value3="80000" value4=".1" name="Acme Arms Dealer" />
+    <set_ship_text name="Acme Arms Dealer" race="Moquarian" class="Independant Merchant" desc="Cargo hold contains various TSN weapons, including nukes." />
+    <set_special name="Acme Arms Dealer" ship="0" captain="0" />
+    <create type="whale" x="91990" y="0" z="58010" angle="275" name="Marjorie" podnumber="1" />
+    <create type="whale" x="91790" y="0" z="58210" angle="275" name="Riya" podnumber="1" />
+    <create type="whale" x="91590" y="0" z="58410" angle="275" name="Chloe" podnumber="1" />
+    <create type="whale" x="91390" y="0" z="60410" angle="275" name="Anastasia" podnumber="1" />
+    <create type="whale" x="51990" y="0" z="18010" angle="295" name="Sofia" podnumber="2" />
+    <create type="whale" x="51790" y="0" z="18210" angle="295" name="Lilly" podnumber="2" />
+    <create type="whale" x="51590" y="0" z="18410" angle="295" name="Julia" podnumber="2" />
+    <create type="whale" x="51390" y="0" z="20410" angle="295" name="Hilde" podnumber="2" />
+    <set_object_property property="energy" value="343" player_slot="0" />
+    <set_object_property property="countMine" value="4" player_slot="0" />
+    <set_object_property property="countNuke" value="2" player_slot="0" />
+    <set_object_property property="countHoming" value="4" player_slot="0" />
+    <set_object_property property="countEMP" value="6" player_slot="0" />
+    <create count="22" type="nebulas" nebType="1" startAngle="95" endAngle="175" startX="100000" startY="0" startZ="0" radius="15000" randomRange="8000" randomSeed="4" />
+    <create count="32" type="nebulas" nebType="1" startAngle="95" endAngle="175" startX="100000" startY="0" startZ="0" radius="25000" randomRange="5000" randomSeed="4" />
+    <create count="42" type="nebulas" nebType="1" startAngle="95" endAngle="175" startX="100000" startY="0" startZ="0" radius="30000" randomRange="5000" randomSeed="4" />
+    <create count="55" type="nebulas" nebType="1" startAngle="95" endAngle="175" startX="100000" startY="0" startZ="0" radius="45000" randomRange="5000" randomSeed="4" />
+    <create count="60" type="nebulas" nebType="1" startAngle="95" endAngle="175" startX="100000" startY="0" startZ="0" radius="55000" randomRange="5000" randomSeed="4" />
+    <create count="70" type="nebulas" nebType="1" startAngle="95" endAngle="175" startX="100000" startY="0" startZ="0" radius="65000" randomRange="5000" randomSeed="6" />
+    <create count="80" type="nebulas" nebType="1" startAngle="95" endAngle="175" startX="100000" startY="0" startZ="0" radius="75000" randomRange="5000" randomSeed="6" />
+    <create count="100" type="nebulas" nebType="1" startAngle="90" endAngle="180" startX="100000" startY="0" startZ="0" radius="83500" randomRange="3000" randomSeed="2" />
+    <create count="20" type="asteroids" startAngle="105" endAngle="170" startX="100000" startY="0" startZ="0" radius="55000" randomRange="25000" randomSeed="6" />
+    <create count="20" type="asteroids" startAngle="105" endAngle="170" startX="100000" startY="100" startZ="0" radius="55000" randomRange="25000" randomSeed="5" />
+    <create count="20" type="asteroids" startAngle="105" endAngle="170" startX="100000" startY="-100" startZ="0" radius="55000" randomRange="25000" randomSeed="4" />
+    <create count="20" type="asteroids" startAngle="105" endAngle="170" startX="100000" startY="200" startZ="0" radius="55000" randomRange="25000" randomSeed="3" />
+    <create count="20" type="asteroids" startAngle="105" endAngle="170" startX="100000" startY="-200" startZ="0" radius="55000" randomRange="25000" randomSeed="2" />
+    <create count="20" type="asteroids" startAngle="105" endAngle="170" startX="100000" startY="400" startZ="0" radius="55000" randomRange="25000" randomSeed="1" />
+    <create count="20" type="asteroids" startAngle="105" endAngle="170" startX="100000" startY="-400" startZ="0" radius="55000" randomRange="25000" randomSeed="7" />
+    <!-- The Start Block also sets the skybox, which will be the main screen background throughout the mission -->
+    <set_skybox_index index="15" />
+    <!-- The Start Block also presents players with the mission title -->
+    <big_message title="HAVOC IN THE HAMAK SECTOR" subtitle1="by Mike Substelny" subtitle2="an adventure for Artemis 2.8" />
+    <set_difficulty_level value="5" />
+    <!-- Finally, the start block sets timers and variables for Chapter 1 -->
+    <set_variable name="chapter" value="1" integer="yes" />
+    <set_timer name="weeks_welcomed_timer" seconds="54" />
+    <set_timer name="payment_plan_timer" seconds="85" />
+    <set_timer name="it_squeaks_timer" seconds="94" />
+    <log text="Starting" />
+    <set_variable name="starring1" value="0.0" integer="yes" />
+    <set_variable name="starring2" value="0.0" integer="yes" />
+    <set_variable name="starring3" value="0.0" integer="yes" />
+    <set_variable name="weeks_welcomed" value="0.0" integer="yes" />
+    <set_variable name="weeks_ripoff" value="0.0" integer="yes" />
+    <set_variable name="haynes_glad" value="0.0" integer="yes" />
+    <set_variable name="dock01" value="0.0" integer="yes" />
+    <set_variable name="dock02" value="0.0" integer="yes" />
+    <set_variable name="dock03" value="0.0" integer="yes" />
+    <set_variable name="dock04" value="0.0" integer="yes" />
+    <set_variable name="dock05" value="0.0" integer="yes" />
+    <set_variable name="dock06" value="0.0" integer="yes" />
+    <set_variable name="dock07" value="0.0" integer="yes" />
+    <set_variable name="ramscoop_transfer" value="0.0" integer="yes" />
+    <set_variable name="ramscoop" value="0.0" integer="yes" />
+    <set_variable name="ramscoop_instructions" value="0.0" integer="yes" />
+    <set_variable name="spin_artemis" value="0.0" integer="yes" />
+    <set_variable name="safety_warning" value="0.0" integer="yes" />
+    <set_variable name="confiscation" value="0.0" integer="yes" />
+    <set_variable name="energy_drop" value="0.0" integer="yes" />
+    <set_variable name="weeks_warning" value="0.0" integer="yes" />
+    <set_variable name="tachyon01" value="0.0" integer="yes" />
+    <set_variable name="haynesnotworried" value="0.0" integer="yes" />
+    <set_variable name="bite_me" value="0.0" integer="yes" />
+    <set_variable name="spotted_something" value="0.0" integer="yes" />
+    <set_variable name="weeks_foolish" value="0.0" integer="yes" />
+    <set_variable name="cigars" value="0.0" integer="yes" />
+    <set_variable name="blood" value="0.0" integer="yes" />
+    <set_variable name="hell_breaks_loose" value="0.0" integer="yes" />
+    <set_variable name="my_god" value="0.0" integer="yes" />
+    <set_variable name="no_minefield" value="0.0" integer="yes" />
+    <set_variable name="warsaws_coming" value="0.0" integer="yes" />
+    <set_variable name="weeks_escape1" value="0.0" integer="yes" />
+    <set_variable name="weeks_escape2" value="0.0" integer="yes" />
+    <set_variable name="weeks_escape3" value="0.0" integer="yes" />
+    <set_variable name="weeks_escape4" value="0.0" integer="yes" />
+    <set_variable name="automated" value="0.0" integer="yes" />
+    <set_variable name="torgoth_message" value="0.0" integer="yes" />
+    <set_variable name="weeks_unauthorized" value="0.0" integer="yes" />
+    <set_variable name="defeated_1" value="0.0" integer="yes" />
+    <set_variable name="defeated_2" value="0.0" integer="yes" />
+    <set_variable name="defeated_3" value="0.0" integer="yes" />
+    <set_variable name="vacating" value="0.0" integer="yes" />
+    <set_timer name="starring_timer1" seconds="10" />
+    <!---->
+    <!---->
+    <!---->
+  </start>
+  <!-- Chapter 1, wherein we meet the dramatis personae -->
+  <!-- Give the crew twenty seconds to settle in as they adjust the music and read the credits -->
+  <event name="Starring Maggie Stahl" id_arme="b6e24986-2902-490e-8851-d1931e94d1d6">
+    <if_timer_finished name="starring_timer1" />
+    <if_variable name="starring1" comparator="EQUALS" value="0.0" />
+    <big_message title="Starring Maggie Stahl" subtitle1="as Captain Haynes" />
+    <set_variable name="starring1" value="1" integer="yes" />
+    <set_object_property property="topSpeed" value="0.001" name="Acme Arms Dealer" />
+    <set_timer name="starring_timer2" seconds="10" />
+    <set_object_property property="topSpeed" value="3.5" name="GW Unlimited 214" />
+  </event>
+  <!-- After 20 seconds the audio messages start coming in -->
+  <event name="Haynes Hello 1" id_arme="2c44dd6f-f02e-429c-bba5-d02b17b1d7c3">
+    <if_timer_finished name="starring_timer2" />
+    <if_variable name="starring1" comparator="EQUALS" value="1.0" />
+    <if_variable name="starring2" comparator="EQUALS" value="0.0" />
+    <big_message title="Also starring Jim Wesolek" subtitle1="as Admiral Weeks" />
+    <set_comms_button text="Message from Capt. Haynes" sideValue="2" />
+    <set_timer name="starring_timer3" seconds="10" />
+    <set_variable name="starring1" value="2.0" integer="yes" />
+    <set_variable name="starring2" value="1.0" integer="yes" />
+  </event>
+  <event name="Haynes Hello 2" id_arme="0e52bacf-7fb6-4b52-9de6-a9048b4c3547">
+    <if_variable name="starring1" comparator="EQUALS" value="2.0" />
+    <if_comms_button text="Message from Capt. Haynes" />
+    <clear_comms_button text="Message from Capt. Haynes" sideValue="2" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\Haynes_ahoy.wav" />
+    <set_timer name="starring_timer2" seconds="16" />
+    <set_variable name="starring1" value="3.0" integer="yes" />
+  </event>
+  <event name="Haynes Hello 3" id_arme="f070d76f-3c74-4c61-ae2e-0f2b9832f92f">
+    <if_variable name="starring1" comparator="EQUALS" value="3.0" />
+    <if_timer_finished name="starring_timer2" />
+    <set_variable name="starring1" value="4.0" integer="yes" />
+    <incoming_comms_text from="Captain Haynes on Warsaw" sideValue="2" type="FRIEND">Ahoy Artemis. I'm Captain Amelia Haynes of the starship Warsaw. Welcome to the armpit of the galaxy. None of my business what you screwed up to get transfered here, I just wanted to say 'Hi' before ol' Squeaks gets to ya. Now I've got to get back to my FUBAR mission of scanning tachyons.</incoming_comms_text>
+  </event>
+  <event name="Starring 3" id_arme="8f47af04-0d43-4831-a3c8-f6a1e2b962dd">
+    <if_timer_finished name="starring_timer3" />
+    <if_variable name="starring2" comparator="EQUALS" value="1.0" />
+    <if_variable name="starring3" comparator="EQUALS" value="0.0" />
+    <big_message title="With Arcturus Rann" subtitle1="Cressida Niel" subtitle2="and Milo Zond" />
+    <set_variable name="starring3" value="1" integer="yes" />
+  </event>
+  <!-- The popups present plenty of info to Comms and Science -->
+  <!-- Admiral Weeks tells Artemis to get a ramscoop installed . . . -->
+  <event name="Weeks Hello 1" id_arme="a27ae8db-6472-4207-8969-2800f62355cd">
+    <if_variable name="chapter" comparator="EQUALS" value="1" />
+    <if_timer_finished name="weeks_welcomed_timer" />
+    <if_variable name="weeks_welcomed" comparator="EQUALS" value="0.0" />
+    <set_comms_button text="Message from Adm. Weeks" sideValue="2" />
+    <create type="neutral" x="25000" y="0" z="35000" angle="175" name="GW Unlimited 157" hullID="1503" sideValue="2" />
+    <clear_ai name="GW Unlimited 157" />
+    <add_ai type="POINT_THROTTLE" value1="12000" value2="0" value3="80000" value4="1" name="GW Unlimited 157" />
+    <set_special name="GW Unlimited 157" ship="0" captain="5" />
+    <warning_popup_message message="New message from Admiral Weeks of Hamak Base." consoles="C" player_slot="0" />
+    <warning_popup_message message="confirmed at Hamak Base." consoles="S" player_slot="0" />
+    <warning_popup_message message="Admiral Weeks security credentials" consoles="S" player_slot="0" />
+    <set_variable name="weeks_welcomed" value="1.0" integer="yes" />
+  </event>
+  <event name="Weeks Hello 2" id_arme="5018e864-d69b-4faf-82dc-95629518f8b5">
+    <if_comms_button text="Message from Adm. Weeks" />
+    <if_variable name="weeks_welcomed" comparator="EQUALS" value="1" />
+    <clear_comms_button text="Message from Adm. Weeks" sideValue="2" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\Weeks_Hello.wav" />
+    <set_timer name="weeks_welcomed_timer" seconds="15" />
+    <set_variable name="weeks_welcomed" value="2.0" integer="yes" />
+  </event>
+  <event name="Weeks Hello 3" id_arme="5642a35d-8fef-4a05-b9ff-cfbb4f1d778f">
+    <if_timer_finished name="weeks_welcomed_timer" />
+    <if_variable name="weeks_welcomed" comparator="EQUALS" value="2.0" />
+    <incoming_comms_text from="Admiral Weeks" sideValue="2" type="FRIEND">Attention Artemis. This is 2-star Admiral Giles Weeks. Welcome to the peaceful Hamak Sector. Please dock at Hamak Base and receive a magnetic ramscoop. It will let Artemis collect energy in the Hamak Nebula, which saves money. In my sector, everyone makes a profit. </incoming_comms_text>
+    <set_variable name="weeks_welcomed" value="3.0" integer="yes" />
+  </event>
+  <!-- . . . then tells them they're lucky to get such an extravagance -->
+  <event name="Ramscoop Expensive 1" id_arme="ed642337-6620-47c0-9b41-2988ad832e29">
+    <if_variable name="chapter" comparator="EQUALS" value="1" />
+    <if_timer_finished name="payment_plan_timer" />
+    <if_variable name="weeks_ripoff" comparator="EQUALS" value="0.0" />
+    <if_variable name="weeks_welcomed" comparator="EQUALS" value="3.0" />
+    <set_comms_button text="Ask Weeks about Ramscoop" sideValue="2" />
+    <set_variable name="weeks_ripoff" value="1" integer="yes" />
+  </event>
+  <event name="Ramscoop Expensive 2" id_arme="5c861a87-57df-4f47-aee7-c9f8f43ec8de">
+    <if_comms_button text="Ask Weeks about Ramscoop" />
+    <if_variable name="weeks_ripoff" comparator="EQUALS" value="1.0" />
+    <clear_comms_button text="Ask Weeks about Ramscoop" sideValue="2" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\Weeks_expensive.wav" />
+    <warning_popup_message message="Sensors detecting Cherenkov radiation." consoles="S" player_slot="0" />
+    <set_timer name="payment_plan_timer" seconds="6" />
+    <set_variable name="weeks_ripoff" value="2.0" integer="yes" />
+  </event>
+  <event name="Ramscoop Expensive 3" id_arme="6c58bf96-267d-4d05-af74-3e9842c89fd6">
+    <if_timer_finished name="payment_plan_timer" />
+    <if_variable name="weeks_ripoff" comparator="EQUALS" value="2.0" />
+    <incoming_comms_text from="Admiral Weeks" sideValue="2" type="FRIEND">Yes, ramscoops are expensive. But don't worry, you won't need to pay a millicredit for yours. The Syndicate will take care of everything.</incoming_comms_text>
+    <set_variable name="weeks_ripoff" value="3.0" integer="yes" />
+  </event>
+  <!-- Captain Haynes tells Artemis what she thinks of Admiral Weeks -->
+  <event name="It Squeaks 1" id_arme="f11f9ae6-ab01-44b9-97c3-e0bc3f927858">
+    <if_variable name="chapter" comparator="EQUALS" value="1" />
+    <if_timer_finished name="it_squeaks_timer" />
+    <if_variable name="weeks_welcomed" comparator="EQUALS" value="3.0" />
+    <if_variable name="haynes_glad" comparator="EQUALS" value="0.0" />
+    <set_comms_button text="Ask Haynes about Weeks" sideValue="2" />
+    <clear_ai name="GW Unlimited 157" />
+    <add_ai type="POINT_THROTTLE" value1="12000" value2="0" value3="80000" value4="1" name="GW Unlimited 157" />
+    <set_variable name="haynes_glad" value="1" integer="yes" />
+  </event>
+  <event name="It Squeaks 2" id_arme="1c8929f4-0acc-4dda-8138-80e0e3bb001a">
+    <if_comms_button text="Ask Haynes about Weeks" />
+    <if_variable name="haynes_glad" comparator="EQUALS" value="1.0" />
+    <clear_comms_button text="Ask Haynes about Weeks" sideValue="2" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\Haynes_it_squeaks.wav" />
+    <set_timer name="it_squeaks_timer" seconds="11" />
+    <set_variable name="haynes_glad" value="2.0" integer="yes" />
+  </event>
+  <event name="It Squeaks 3" id_arme="2ee2d174-1716-425b-ae41-7e4889ee9150">
+    <if_timer_finished name="it_squeaks_timer" />
+    <if_variable name="haynes_glad" comparator="EQUALS" value="2.0" />
+    <incoming_comms_text from="Captain Haynes on Warsaw" sideValue="2" type="FRIEND">Haynes to Artemis. See why I call him 'Squeaks'? If you pry two credits from his money-grubbing hand, it squeaks. All he cares about are his profits. I'm in this war to fight, not make money.</incoming_comms_text>
+    <set_variable name="haynes_glad" value="3.0" integer="yes" />
+  </event>
+  <!-- When Artemis docks ramscoop is installed -->
+  <event name="Prep for Installation" id_arme="244c288f-5eb2-4aca-b71b-cf58182fb00d">
+    <if_variable name="chapter" comparator="EQUALS" value="1" />
+    <if_docked player_slot="0" name="Hamak Base" />
+    <set_timer name="confiscate_weapons_timer" seconds="16" />
+    <set_timer name="wreck_Artemis_timer" seconds="4" />
+  </event>
+  <!-- While Artemis is docked continuously restart these timers -->
+  <event name="Undock during Installation?" id_arme="f0cdef89-3724-4b0e-b3a5-0c42d617acf5">
+    <if_variable name="wreck_artemis" comparator="EQUALS" value="1" />
+    <if_timer_finished name="spinning_timer" />
+    <set_variable name="wreck_artemis" value="0" integer="yes" />
+  </event>
+  <!-- Ramscoop installation takes four recurrances of 12 second timer -->
+  <event name="Ramscoop Begin 1" id_arme="bb8cacd6-db67-42d0-87eb-75af5d568415">
+    <if_variable name="chapter" comparator="EQUALS" value="1" />
+    <if_docked player_slot="0" name="Hamak Base" />
+    <if_variable name="dock01" comparator="EQUALS" value="0.0" />
+    <if_variable name="ramscoop_transfer" comparator="EQUALS" value="0.0" />
+    <clear_comms_button text="Ramscoop Instructions" sideValue="2" />
+    <set_comms_button text="Ramscoop Instructions" sideValue="2" />
+    <warning_popup_message message="Ramscoop system being transferred aboard." consoles="C" player_slot="0" />
+    <warning_popup_message message="WARNING: DO NOT UNDOCK DURING RAMSCOOP TRANSFER." consoles="E" player_slot="0" />
+    <create type="genericMesh" x="98000" y="0" z="59000" name="Tachyon Source 1" meshFileName="dat/asteroid.dxs" textureFileName="dat/electricNoise2.png" colorBlue="1" />
+    <set_object_property property="artScale" value="1.2" name="Tachyon Source 1" />
+    <set_ship_text name="Tachyon Source 1" desc="Sensors detect high levels of tachyon activity. Unable to determine source at this range." />
+    <create type="genericMesh" x="98000" y="0" z="19000.0" name="Tachyon Source 2" meshFileName="dat/asteroid.dxs" textureFileName="dat/electricNoise2.png" colorBlue="1" />
+    <set_object_property property="artScale" value="1.2" name="Tachyon Source 2" />
+    <set_ship_text name="Tachyon Source 2" desc="Sensors detect high levels of tachyon activity. Unable to determine source at this range." />
+    <create type="genericMesh" x="59000.0" y="0" z="1600.0" name="Tachyon Source 3" meshFileName="dat/asteroid.dxs" textureFileName="dat/electricNoise2.png" colorBlue="1" />
+    <set_object_property property="artScale" value="1.2" name="Tachyon Source 3" />
+    <set_ship_text name="Tachyon Source 3" desc="Sensors detect high levels of tachyon activity. Unable to determine source at this range." />
+    <incoming_comms_text from="Base Operations Manager" sideValue="2" type="STATION FRIEND">
+      Ramscoop installation beginning. Do not undock during ramscoop installation.
+    </incoming_comms_text>
+    <set_timer name="install_timer" seconds="12" />
+    <set_variable name="dock01" value="1" integer="yes" />
+    <set_variable name="safety_warning" value="0" integer="yes" />
+    <set_variable name="spin_artemis" value="0" integer="yes" />
+    <set_variable name="ramscoop_transfer" value="1" integer="yes" />
+  </event>
+  <event name="Ramscoop Begin 2" id_arme="481d2169-ad88-4af1-b622-438904b574c3">
+    <if_comms_button text="Ramscoop Instructions" />
+    <if_variable name="ramscoop_transfer" comparator="EQUALS" value="1.0" />
+    <clear_comms_button text="Ramscoop Instructions" sideValue="2" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\Base_explains_scoop.wav" />
+    <set_timer name="text_timer" seconds="11" />
+    <set_variable name="ramscoop_transfer" value="2.0" integer="yes" />
+  </event>
+  <event name="Ramscoop Begin 3" id_arme="4948a9e6-7869-49d5-91ed-8e00e41adaf6">
+    <if_timer_finished name="text_timer" />
+    <if_variable name="ramscoop_transfer" comparator="EQUALS" value="2.0" />
+    <clear_comms_button text="Ramscoop Instructions" sideValue="2" />
+    <incoming_comms_text from="Base Operations Manager" sideValue="2" type="STATION FRIEND">You can use your new ramscoop anywhere in the Hamak Nebula. It won't work if your shields are up, or if you're traveling at warp speed. Just drop your shields and move at impulse speed. The faster you go, the more energy you will gather. </incoming_comms_text>
+    <set_variable name="ramscoop_transfer" value="3.0" integer="yes" />
+  </event>
+  <event name="Ramscoop 25%" id_arme="502183cb-917d-4139-99d3-a737bd9e8c5f">
+    <if_variable name="chapter" comparator="EQUALS" value="1" />
+    <if_timer_finished name="install_timer" />
+    <if_variable name="dock01" comparator="EQUALS" value="1" />
+    <if_variable name="dock02" comparator="EQUALS" value="0.0" />
+    <if_docked player_slot="0" name="Hamak Base" />
+    <set_variable name="dock02" value="1" integer="yes" />
+    <incoming_comms_text from="Base Operations Manager" sideValue="2" type="STATION FRIEND">You can use your new ramscoop anywhere in the Hamak Nebula. It won't work if your shields are up, or if you're traveling at warp speed. Just drop your shields and move at impulse speed. The faster you go, the more energy you will gather.</incoming_comms_text>
+    <incoming_comms_text from="Base Operations Manager" sideValue="2" type="STATION FRIEND">
+      Ramscoop installation 25% complete. Do you guys have any spare holo-games? I'll give you a good price.
+    </incoming_comms_text>
+    <set_timer name="install_timer" seconds="12" />
+    <warning_popup_message message="indicates tachyons." consoles="S" player_slot="0" />
+    <warning_popup_message message="LIBRARY COMPUTER: Cherenkov radiation" consoles="S" player_slot="0" />
+  </event>
+  <event name="Ramscoop 50%" id_arme="ee1621b8-baba-4a63-baac-3bd0b4284cec">
+    <if_variable name="chapter" comparator="EQUALS" value="1" />
+    <if_timer_finished name="install_timer" />
+    <if_variable name="dock02" comparator="EQUALS" value="1" />
+    <if_variable name="dock03" comparator="EQUALS" value="0.0" />
+    <if_docked player_slot="0" name="Hamak Base" />
+    <set_variable name="dock03" value="1" integer="yes" />
+    <incoming_comms_text from="Base Operations Manager" sideValue="2" type="STATION FRIEND">
+      Ramscoop installation 50% complete. How about a hot tub? I have a beauty that will fit in your torpedo bay. Practically brand new.
+    </incoming_comms_text>
+    <warning_popup_message message="Scanning tachyon source in grid C1." consoles="S" player_slot="0" />
+    <set_timer name="install_timer" seconds="12" />
+  </event>
+  <event name="Ramscoop 75%" id_arme="c42ba8a6-59ed-4584-b78e-a50a5f267e73">
+    <if_variable name="chapter" comparator="EQUALS" value="1" />
+    <if_timer_finished name="install_timer" />
+    <if_variable name="dock03" comparator="EQUALS" value="1" />
+    <if_variable name="dock04" comparator="EQUALS" value="0.0" />
+    <if_docked player_slot="0" name="Hamak Base" />
+    <set_variable name="dock04" value="1" integer="yes" />
+    <incoming_comms_text from="Base Operations Manager" sideValue="2" type="STATION FRIEND">
+      Ramscoop installation 75% complete.  Need any cigarettes? Just ten credits a pack - - - even less if you buy in bulk!
+    </incoming_comms_text>
+    <set_timer name="install_timer" seconds="12" />
+  </event>
+  <!-- Once Ramscoop is installed they receive orders from Admiral Weeks -->
+  <event name="Ramscoop Installed 1" id_arme="0725a05b-5e00-49eb-9a88-7c5ac0c1e5af">
+    <if_variable name="chapter" comparator="EQUALS" value="1" />
+    <if_docked player_slot="0" name="Hamak Base" />
+    <if_timer_finished name="install_timer" />
+    <if_variable name="dock04" comparator="EQUALS" value="1" />
+    <if_variable name="dock05" comparator="EQUALS" value="0.0" />
+    <if_variable name="ramscoop" comparator="EQUALS" value="0.0" />
+    <set_comms_button text="Orders from Adm. Weeks" sideValue="2" />
+    <warning_popup_message message="Scanning tachyon source in grid C1." consoles="S" player_slot="0" />
+    <warning_popup_message message="Engineering team running diagnostics." consoles="E" player_slot="0" />
+    <warning_popup_message message="Ramscoop system is installed." consoles="E" player_slot="0" />
+    <set_timer name="ramscoop_install_timer" seconds="26" />
+    <incoming_comms_text from="Base Operations Manager" sideValue="2" type="STATION FRIEND">
+      Your ramscoop installation is complete. Come back tomorrow for a deal on French ice cream!
+    </incoming_comms_text>
+    <set_variable name="dock05" value="1" integer="yes" />
+    <set_variable name="ramscoop" value="1" integer="yes" />
+  </event>
+  <event name="Ramscoop Installed 2" id_arme="c8b5a908-dfc4-475a-9534-c1ef8636ed12">
+    <if_comms_button text="Orders from Adm. Weeks" />
+    <if_variable name="ramscoop_instructions" comparator="EQUALS" value="0.0" />
+    <clear_comms_button text="Orders from Adm. Weeks" sideValue="2" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\Weeks_orders.wav" />
+    <set_timer name="install_timer" seconds="12" />
+    <set_variable name="ramscoop_instructions" value="1.0" integer="yes" />
+  </event>
+  <event name="Ramscoop Installed 3" id_arme="ebe4c56a-33ed-4122-9d82-b4ccac2bbe82">
+    <if_timer_finished name="install_timer" />
+    <if_variable name="ramscoop_instructions" comparator="EQUALS" value="1.0" />
+    <incoming_comms_text from="Admiral Weeks" sideValue="2" type="FRIEND">Artemis, I'm giving you a science mission. An hour ago, we detected three new tachyon sources in the nebula. You will investigate unknown tachyon source #1 in grid C1. There's a bonus if you find a way to make money from it.</incoming_comms_text>
+    <set_variable name="ramscoop_instructions" value="2.0" integer="yes" />
+  </event>
+  <!-- If they return later the Ops Manager is gone -->
+  <event name="Set Hot Tub Timer" id_arme="c004a496-b0e8-48cb-b8f0-52a6514856a2">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="weeks_escape3" comparator="GREATER_EQUAL" value="1" />
+    <if_docked player_slot="0" name="Hamak Base" />
+    <if_variable name="dock06" comparator="EQUALS" value="0.0" />
+    <set_timer name="hot_tub_timer" seconds="5" />
+    <set_variable name="dock06" value="1" integer="yes" />
+  </event>
+  <!-- Greenhaw was left behind and he has a story to tell to our Comms officer -->
+  <event name="Meet Greenhaw" id_arme="3c514c8e-4e66-4fb3-8b8a-c274c932ec50">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_docked player_slot="0" name="Hamak Base" />
+    <if_variable name="dock07" comparator="EQUALS" value="0.0" />
+    <if_timer_finished name="hot_tub_timer" />
+    <incoming_comms_text from="Ensign Greenhaw - Hamak Base" sideValue="2" type="FRIEND">Hi Artemis. The Operations Manager left me in charge and gave me this awesome hot tub! Today is a good day to take shore leave, if you know what I mean.    </incoming_comms_text>
+    <set_variable name="dock07" value="1" integer="yes" />
+    <set_timer name="free_nuke_timer" seconds="60" />
+  </event>
+  <event name="Greenhaw Finds Nuke" id_arme="903c4d65-29b9-4541-86a6-e44f8aabba37">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="found_nuke" comparator="NOT" value="1" />
+    <if_timer_finished name="free_nuke_timer" />
+    <incoming_comms_text from="Ensign Greenhaw - Hamak Base" sideValue="2" type="FRIEND">
+      ^Hey Artemis! I just found a nuke! It's probably a dud, but it's yours if you want it.
+    </incoming_comms_text>
+    <set_variable name="found_nuke" value="1" integer="yes" />
+    <addto_object_property value="1" property="missileStoresNuke" name="Hamak Base" />
+    <addto_object_property value="2" property="missileStoresEMP" name="Hamak Base" />
+    <addto_object_property value="2" property="missileStoresMine" name="Hamak Base" />
+  </event>
+  <event name="Greenhaw Snivels" id_arme="bbf9effd-702c-4ee3-930b-f7498829fd80">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_docked player_slot="0" name="Hamak Base" />
+    <if_variable name="found_nuke" comparator="EQUALS" value="1" />
+    <if_variable name="greenhaw_snivels" comparator="NOT" value="1" />
+    <incoming_comms_text from="Ensign Greenhaw - Hamak Base" sideValue="2" type="FRIEND">Um, Artemis? It's getting kind of scary here. Lieutennant Jowarski is in command now and she says the Torgoths might kill us all. But you're going to protect us, right?    </incoming_comms_text>
+    <set_variable name="greenhaw_snivels" value="1" integer="yes" />
+  </event>
+  <!-- If they undock too soon something terrible happens -->
+  <!-- First the ship is damaged -->
+  <event name="Wreck Artemis!" id_arme="e2e81f36-2630-4d03-8bf8-b1d421853e71">
+    <if_variable name="ramscoop" comparator="EQUALS" value="0.0" />
+    <if_variable name="spin_artemis" comparator="EQUALS" value="0.0" />
+    <if_timer_finished name="wreck_Artemis_timer" />
+    <clear_comms_button text="Ramscoop Instructions" sideValue="2" />
+    <set_comms_button text="SAFETY WARNING" sideValue="2" />
+    <log text="Starting\n\n" />
+    <set_variable name="dock01" value="0" integer="yes" />
+    <set_variable name="dock02" value="0" integer="yes" />
+    <set_variable name="dock03" value="0" integer="yes" />
+    <set_variable name="dock04" value="0" integer="yes" />
+    <set_timer name="install_timer" seconds="1000" />
+    <set_timer name="ramscoop_install_timer" seconds="1000" />
+    <set_variable name="ramscoop_transfer" value="0" integer="yes" />
+    <set_variable name="wreck_artemis" value="1" integer="yes" />
+    <set_variable name="spin_artemis" value="1" integer="yes" />
+    <incoming_comms_text from="Base Operations Manager" sideValue="2" type="STATION">
+      Artemis! Are you insane? We weren't done installing your ramscoop!
+    </incoming_comms_text>
+    <set_player_grid_damage value="1.0" player_slot="0" index="3" systemType="systemWarp" countFrom="front" />
+    <set_player_grid_damage value="1.0" player_slot="0" index="2" systemType="systemWarp" countFrom="front" />
+    <set_player_grid_damage value="1.0" player_slot="0" index="1" systemType="systemWarp" countFrom="front" />
+    <set_player_grid_damage value="1.0" player_slot="0" index="0" systemType="systemWarp" countFrom="front" />
+    <set_player_grid_damage value="0.1" player_slot="0" index="1" systemType="systemTurning" countFrom="front" />
+    <set_player_grid_damage value="0.1" player_slot="0" index="0" systemType="systemTurning" countFrom="front" />
+    <destroy name="Tachyon Source 1" />
+    <destroy name="Tachyon Source 2" />
+    <destroy name="Tachyon Source 3" />
+    <set_damcon_members value="4" team_index="0" player_slot="0" />
+    <set_damcon_members value="4" team_index="1" player_slot="0" />
+    <set_damcon_members value="4" team_index="2" player_slot="0" />
+    <warning_popup_message message="Multiple DamCon team casualties!" consoles="E" player_slot="0" />
+    <set_timer name="spinning_timer" seconds="3" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\explosion.wav" />
+  </event>
+  <event name="Safety Warning 1" id_arme="6042b8a8-b62b-4be7-b8e2-96d9d1e24fa1">
+    <if_variable name="safety_warning" comparator="EQUALS" value="0.0" />
+    <if_comms_button text="SAFETY WARNING" />
+    <clear_comms_button text="SAFETY WARNING" sideValue="2" />
+    <set_timer name="text_timer" seconds="6" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\Base_warning.wav" />
+    <set_variable name="safety_warning" value="1.0" integer="yes" />
+  </event>
+  <event name="Safety Warning 2" id_arme="28764709-cb51-4e4e-9264-a6c297d63c29">
+    <if_timer_finished name="text_timer" />
+    <if_variable name="safety_warning" comparator="EQUALS" value="1.0" />
+    <incoming_comms_text from="Base Operations Manager" sideValue="2" type="STATION FRIEND">Warning Artemis! Do not undock during a major refit. Please repair your damage, and return to the base.</incoming_comms_text>
+    <set_variable name="safety_warning" value="2.0" integer="yes" />
+  </event>
+  <!-- Then is spins out of control for three seconds -->
+  <event name="Artemis Spins" id_arme="d20fbb4c-0837-4b65-8d31-788559be14a1">
+    <if_variable name="wreck_artemis" comparator="EQUALS" value="1" />
+    <addto_object_property value="0.02" property="angle" player_slot="0" />
+    <addto_object_property value="+4" property="positionX" player_slot="0" />
+    <addto_object_property value="-4" property="positionZ" player_slot="0" />
+  </event>
+  <!-- Fifteen seconds after undocking something unpleasant happens to Artemis's weapons -->
+  <!-- The crew gets the bad news from the Admiral as well as pop-ups -->
+  <event name="Confiscate Weapons 1" id_arme="1c471f0d-c19d-4be4-b27e-f79dd020420d">
+    <if_timer_finished name="confiscate_weapons_timer" />
+    <if_variable name="dock01" comparator="EQUALS" value="1" />
+    <if_variable name="confiscation" comparator="EQUALS" value="0.0" />
+    <set_comms_button text="Update from Adm. Weeks" sideValue="2" />
+    <set_object_property property="countMine" value="0" player_slot="0" />
+    <set_object_property property="countNuke" value="0" player_slot="0" />
+    <set_object_property property="countHoming" value="0" player_slot="0" />
+    <set_object_property property="countEMP" value="0" player_slot="0" />
+    <set_object_property property="countShk" value="0" player_slot="0" />
+    <set_object_property property="topSpeed" value="8" name="Acme Arms Dealer" />
+    <set_object_property property="turnRate" value="1/2" name="Acme Arms Dealer" />
+    <set_object_property property="throttle" value="1" name="Acme Arms Dealer" />
+    <clear_ai name="Acme Arms Dealer" />
+    <add_ai type="POINT_THROTTLE" value1="18000" value2="0" value3="100000" value4="1" name="Acme Arms Dealer" />
+    <warning_popup_message message="Admiral Weeks." consoles="W" player_slot="0" />
+    <warning_popup_message message="and Homing Torpedoes confiscated by" consoles="W" player_slot="0" />
+    <warning_popup_message message="WEAPONS BAY reports Mines, Nukes, ECMs," consoles="W" player_slot="0" />
+    <set_variable name="confiscation" value="1" integer="yes" />
+    <set_timer name="tachyon_timer01" seconds="10" />
+    <set_timer name="nebula_thick_timer" seconds="45" />
+  </event>
+  <event name="Confiscate Weapons 2" id_arme="291908cd-0dad-4196-9f04-7e4936e3c927">
+    <if_comms_button text="Update from Adm. Weeks" />
+    <if_variable name="confiscation" comparator="EQUALS" value="1" />
+    <clear_comms_button text="Update from Adm. Weeks" sideValue="2" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\Weeks_confiscation.wav" />
+    <set_timer name="confiscate_weapons_timer" seconds="12">Good news, Artemis! The Syndicate just sold all of your torpedo weapons and made enough money to pay for your ramscoop, with a little leftover for you. Now every person on the Artemis owns one share of the Hamak Syndicate. Good job!</set_timer>
+    <set_variable name="confiscation" value="2.0" integer="yes" />
+  </event>
+  <event name="Confiscate Weapons 3" id_arme="49c2ac99-3c01-43f5-9d0a-0b7a1a893f4a">
+    <if_timer_finished name="confiscate_weapons_timer" />
+    <if_variable name="confiscation" comparator="EQUALS" value="2.0" />
+    <incoming_comms_text from="Admiral Weeks" sideValue="2" type="FRIEND">Good news, Artemis! The Syndicate just sold all of your torpedo weapons and made enough money to pay for your ramscoop, with a little leftover for you. Now every person on the Artemis owns one share of the Hamak Syndicate. Good job!</incoming_comms_text>
+    <set_variable name="confiscation" value="3.0" integer="yes" />
+  </event>
+  <!-- Discourage Artemis from trying to join Warsaw too early in the mission -->
+  <event name="Going the Wrong Way 1" id_arme="62cebe8c-1f6b-4ae3-ad23-a1a3634a6f58">
+    <if_variable name="chapter" comparator="EQUALS" value="1" />
+    <if_variable name="dock01" comparator="EQUALS" value="1" />
+    <if_timer_finished name="tachyon_timer01" />
+    <if_distance player_slot1="0" name2="Hamak Base" comparator="LESS" value="600" />
+    <if_variable name="weeks_warning" comparator="EQUALS" value="0.0" />
+    <set_comms_button text="Reminder from Adm. Weeks" sideValue="2" />
+    <set_variable name="weeks_warning" value="1.0" integer="yes" />
+  </event>
+  <event name="Going the Wrong Way 2" id_arme="677364b5-0276-4069-ab36-b7a25407ad8f">
+    <if_comms_button text="Reminder from Adm. Weeks" />
+    <if_variable name="weeks_warning" comparator="EQUALS" value="1" />
+    <clear_comms_button text="Reminder from Adm. Weeks" sideValue="2" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\Weeks_warning.wav" />
+    <set_timer name="text_timer" seconds="18" />
+    <set_variable name="weeks_warning" value="2.0" integer="yes" />
+  </event>
+  <event name="Going the Wrong Way 3" id_arme="756824af-1ce4-4d81-9a7d-1d154b801887">
+    <if_timer_finished name="text_timer" />
+    <if_variable name="weeks_warning" comparator="EQUALS" value="2.0" />
+    <incoming_comms_text from="Admiral Weeks" sideValue="2" type="FRIEND">Attention, Artemis! This is 2-star Admiral Giles Weeks, Supreme Commander of the Hamak Sector. Your mission is to investigate unknown tachyon source #1, located in grid C1 of the nebula. You are to leave unknown tachyon source #3 for the Warsaw. Please turn hard to port and complete your mission.</incoming_comms_text>
+    <set_variable name="weeks_warning" value="3.0" integer="yes" />
+  </event>
+  <!-- Captain Haynes laments that weapons aren't needed here -->
+  <!-- We're 20 parsecs from the fighting. What could happen? -->
+  <event name="Haynes not Worried 1" id_arme="d0319deb-220f-4178-a190-c852f8b37269">
+    <if_variable name="chapter" comparator="EQUALS" value="1" />
+    <if_timer_finished name="tachyon_timer01" />
+    <if_variable name="tachyon01" comparator="EQUALS" value="0.0" />
+    <if_variable name="confiscation" comparator="EQUALS" value="3.0" />
+    <set_comms_button text="Condolences from Warsaw" sideValue="2" />
+    <warning_popup_message message="Tachyon energy 9 gigaWatts and rising." consoles="s" player_slot="0" />
+    <set_object_property property="rollDelta" value="4.5" name="T1A" />
+    <set_object_property property="rollDelta" value="-4.5" name="T1B" />
+    <warning_popup_message message="torpedoes from energy." consoles="W" player_slot="0" />
+    <warning_popup_message message="REMINDER: Weapons Officer can make" consoles="W" player_slot="0" />
+    <set_variable name="tachyon01" value="1" integer="yes" />
+  </event>
+  <event name="Haynes not Worried 2" id_arme="52755a76-31d8-46d3-91e2-a7968fc3aca0">
+    <if_comms_button text="Condolences from Warsaw" />
+    <if_variable name="tachyon01" comparator="EQUALS" value="1" />
+    <clear_comms_button text="Condolences from Warsaw" sideValue="2" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\Haynes_not_worried.wav" />
+    <set_timer name="text_timer" seconds="0" />
+    <set_variable name="haynesnotworried" value="2.0" integer="yes" />
+  </event>
+  <event name="Haynes not Worried 3" id_arme="e3befc46-a55e-4c1e-8ee1-bdb1b3086520">
+    <if_timer_finished name="text_timer" />
+    <if_variable name="haynesnotworried" comparator="EQUALS" value="2.0" />
+    <incoming_comms_text from="Captain Haynes on Warsaw" sideValue="2" type="FRIEND">Haynes to Artemis. Don't worry about your weapons. We're 20 parsecs from the front lines, and we never fire a shot here. Squeaks even sold our minefield to the Kraliens.</incoming_comms_text>
+    <set_variable name="haynesnotworried" value="3.0" integer="yes" />
+  </event>
+  <!-- The popups present plenty of info to Comms and Science -->
+  <!-- Set up variables and timers for Chapter 2 -->
+  <!-- Warsaw is created and destroyed peroidically to get alert -->
+  <!-- Science Officers used to having it vanish and reappear -->
+  <event name="Begin Chapter 2" id_arme="d6e9cf43-5da9-4939-8770-f4efe32be382">
+    <if_variable name="chapter" comparator="EQUALS" value="1" />
+    <if_timer_finished name="nebula_thick_timer" />
+    <if_timer_finished name="tachyon_timer01" />
+    <if_variable name="nebula_thick" comparator="NOT" value="1" />
+    <set_comms_button text="Update from Warsaw" sideValue="2" />
+    <set_variable name="nebula_thick" value="1" integer="yes" />
+    <destroy name="Warsaw" />
+    <warning_popup_message message="Sensor contact with Warsaw lost. Possible nebula interference." consoles="S" player_slot="0" />
+    <set_timer name="bite_me_timer" seconds="28" />
+    <set_timer name="spotted_something_timer" seconds="59" />
+    <set_timer name="weeks_foolish_timer" seconds="70" />
+    <set_timer name="hell_breaks_loose_timer" seconds="100" />
+    <set_timer name="my_god_timer" seconds="118" />
+    <set_timer name="no_minefield_timer" seconds="145" />
+    <set_timer name="Warsaw_gone_timer" seconds="160" />
+    <set_timer name="text_timer" seconds="7" />
+    <set_variable name="chapter" value="2" integer="yes" />
+    <log text="Chapter 2\n\n" />
+  </event>
+  <event name="Nebula Thick Message 1" id_arme="358e46c7-8331-43e1-a938-01332cb7be62">
+    <if_comms_button text="Update from Warsaw" />
+    <if_variable name="nebula_thick" comparator="EQUALS" value="1" />
+    <clear_comms_button text="Update from Warsaw" sideValue="2" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\Haynes_thick.wav" />
+    <set_timer name="nebula_thick_timer" seconds="11" />
+    <set_variable name="nebula_thick" value="2.0" integer="yes" />
+  </event>
+  <event name="Nebula Thick Message 2" id_arme="56f8a551-149b-41a1-a1fd-51b60d2d09d5">
+    <if_timer_finished name="nebula_thick_timer" />
+    <if_variable name="nebula_thick" comparator="EQUALS" value="2.0" />
+    <incoming_comms_text from="Captain Haynes on Warsaw" sideValue="2" type="FRIEND">Haynes to Artemis. The nebula is pretty thick here. We can't see a damned thing. The tachyon energy keeps rising, so we're probing deeper.</incoming_comms_text>
+    <set_variable name="nebula_thick" value="3.0" integer="yes" />
+  </event>
+  <!-- Chapter 2, wherein Artemis and Warsaw discover a sinister Torgoth plot -->
+  <!-- Comms from Warsaw builds suspense. What do the tachyons mean? -->
+  <event name="Bite Me 1" id_arme="7a2a6632-7d39-465b-84e5-3e4a65b6c36a">
+    <if_variable name="chapter" comparator="EQUALS" value="2" />
+    <if_timer_finished name="bite_me_timer" />
+    <if_variable name="nebula_thick" comparator="EQUALS" value="3.0" />
+    <if_variable name="bite_me" comparator="EQUALS" value="0.0" />
+    <set_comms_button text="Message from Warsaw" sideValue="2" />
+    <warning_popup_message message="Tachyon energy 10 gigaWatts and rising." consoles="s" player_slot="0" />
+    <set_object_property property="rollDelta" value="5" name="T1A" />
+    <set_object_property property="rollDelta" value="-5" name="T1B" />
+    <set_timer name="text_timer" seconds="11" />
+    <set_variable name="bite_me" value="1" integer="yes" />
+    <create type="neutral" x="59000" y="0" z="5000" angle="0" name="Warsaw" hullID="1501" sideValue="2" />
+    <add_ai type="POINT_THROTTLE" value1="59000" value2="0" value3="1600" value4="1" name="Warsaw" />
+    <set_object_property property="topSpeed" value="1.2" name="Warsaw" />
+    <set_object_property property="turnRate" value="1/100" name="Warsaw" />
+    <set_ship_text name="Warsaw" race="TSN" class="Heavy Destroyer" desc="Captain Amelia Haynes commanding" scan_desc="Library Computer: Captain Haynes was repremanded for being overly aggressive at the battle of Helix Aquarius." />
+    <set_special name="Warsaw" ship="0" captain="5" />
+  </event>
+  <event name="Bite Me 2" id_arme="bcb1eb1d-ebb9-404b-814a-cc3b7b185b18">
+    <if_comms_button text="Message from Warsaw" />
+    <if_variable name="bite_me" comparator="EQUALS" value="1" />
+    <clear_comms_button text="Message from Warsaw" sideValue="2" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\Haynes_bet.wav" />
+    <set_timer name="bite_me_timer" seconds="11">Haynes to Artemis. Now approaching tachyon source #3. I bet two months of paperwork that my crew can figure this out before yours. And if you talk to ol' Squeaks, tell him he can 'Bite Me'!</set_timer>
+    <set_variable name="bite_me" value="2.0" integer="yes" />
+  </event>
+  <event name="Bite Me 3" id_arme="4f8abaeb-4b75-4660-9891-e4c90cbad977">
+    <if_comms_button text="Message from Warsaw" />
+    <if_variable name="bite_me" comparator="EQUALS" value="2.0" />
+    <clear_comms_button text="Message from Warsaw" sideValue="2" />
+    <incoming_comms_text from="Captain Haynes on Warsaw" sideValue="2" type="FRIEND">Haynes to Artemis. Now approaching tachyon source #3. I bet two months of paperwork that my crew can figure this out before yours. And if you talk to ol' Squeaks, tell him he can 'Bite Me'!</incoming_comms_text>
+    <set_variable name="bite_me" value="3.0" integer="yes" />
+  </event>
+  <!-- Was that a Torgoth Goliath she saw? -->
+  <event name="Spotted Something 1" id_arme="4ffea990-4e92-4dd7-9024-53bc2e46ff16">
+    <if_variable name="chapter" comparator="EQUALS" value="2" />
+    <if_timer_finished name="spotted_something_timer" />
+    <if_variable name="spotted_something" comparator="EQUALS" value="0.0" />
+    <set_comms_button text="Warsaw Spotted Something" sideValue="2" />
+    <warning_popup_message message="Tachyon energy 11 gigaWatts and rising." consoles="s" player_slot="0" />
+    <set_object_property property="rollDelta" value="5.5" name="T1A" />
+    <set_object_property property="rollDelta" value="-5.5" name="T1B" />
+    <destroy name="Warsaw" />
+    <set_variable name="spotted_something" value="1" integer="yes" />
+  </event>
+  <event name="Spotted Something 2" id_arme="949d91ac-90af-4e64-900c-596d6a25a658">
+    <if_comms_button text="Warsaw Spotted Something" />
+    <if_variable name="spotted_something" comparator="EQUALS" value="1.0" />
+    <clear_comms_button text="Warsaw Spotted Something" sideValue="2" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\Haynes_contact.wav" />
+    <set_timer name="spotted_something_timer" seconds="5" />
+    <set_variable name="spotted_something" value="2.0" integer="yes" />
+  </event>
+  <event name="Spotted Something 3" id_arme="9483d91f-bf9a-485d-8b95-640052338c49">
+    <if_timer_finished name="spotted_something_timer" />
+    <if_variable name="spotted_something" comparator="EQUALS" value="2.0" />
+    <incoming_comms_text from="Captain Haynes on Warsaw" sideValue="2" type="FRIEND">Haynes to Artemis. Intermittent sensor contact ahead. It could be a Torgoth ship.</incoming_comms_text>
+    <set_variable name="spotted_something" value="3.0" integer="yes" />
+  </event>
+  <!-- Admiral Weeks doesn't want to hear about Torgoths -->
+  <event name="Rumors 1" id_arme="7dd4521a-791a-4eb0-a0bf-d93f14eade31">
+    <if_variable name="chapter" comparator="EQUALS" value="2" />
+    <if_timer_finished name="weeks_foolish_timer" />
+    <if_variable name="weeks_foolish" comparator="EQUALS" value="0.0" />
+    <if_variable name="spotted_something" comparator="EQUALS" value="3.0" />
+    <set_comms_button text="Adm. Weeks to Warsaw" sideValue="2" />
+    <set_variable name="weeks_foolish" value="1" integer="yes" />
+  </event>
+  <event name="Rumors 2" id_arme="9491a87d-72da-4441-a52f-c3af859a0cd5">
+    <if_comms_button text="Adm. Weeks to Warsaw" />
+    <if_variable name="weeks_foolish" comparator="EQUALS" value="1.0" />
+    <clear_comms_button text="Adm. Weeks to Warsaw" sideValue="2" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\Weeks_rumors.wav" />
+    <set_timer name="weeks_foolish_timer" seconds="9" />
+    <set_variable name="weeks_foolish" value="2.0" integer="yes" />
+  </event>
+  <event name="Rumors 3" id_arme="e986a1c7-88b3-4e1b-b40c-5154c03816af">
+    <if_timer_finished name="weeks_foolish_timer" />
+    <if_variable name="weeks_foolish" comparator="EQUALS" value="2.0" />
+    <incoming_comms_text from="Admiral Weeks" sideValue="2" type="FRIEND">Attention Warsaw. Miss Haynes, please don't start any rumors of Torgoths in this sector. It would be bad for business. Please do your little science mission and come home.</incoming_comms_text>
+    <set_variable name="weeks_foolish" value="3.0" integer="yes" />
+  </event>
+  <!-- But everything changes when the Hell Breaks Loose timer reaches zero! -->
+  <event name="Set up first round of enemies" id_arme="afe345d1-ae3c-44d7-b6f5-67089c96997f">
+    <if_variable name="hell_breaks_loose" comparator="EQUALS" value="1" />
+    <if_variable name="setup_1" comparator="EQUALS" value="0" />
+    <if_timer_finished name="setup_1_timer" />
+    <add_ai type="CHASE_PLAYER" value1="20000" value2="10000" name="DN03" />
+    <add_ai type="CHASE_PLAYER" value1="20000" value2="10000" name="BB04" />
+    <add_ai type="CHASE_PLAYER" value1="20000" value2="10000" name="BB05" />
+    <add_ai type="CHASE_WHALE" value1="10000" name="DN03" />
+    <add_ai type="CHASE_WHALE" value1="10000" name="BB04" />
+    <add_ai type="CHASE_WHALE" value1="10000" name="BB05" />
+    <!-- set_object_property name="DN03" property="shieldMaxStateFront" value="25"/>
+    <set_object_property name="DN03" property="shieldMaxStateBack" value="25"/>
+    <set_object_property name="BB04" property="shieldMaxStateFront" value="20"/>
+    <set_object_property name="BB04" property="shieldMaxStateBack" value="20"/>
+    <set_object_property name="BB05" property="shieldMaxStateFront" value="20"/>
+    <set_object_property name="BB05" property="shieldMaxStateBack" value="20"/>
+    <set_object_property name="DN03" property="shieldStateFront" value="0"/>
+    <set_object_property name="DN03" property="shieldStateBack" value="0"/>
+    <set_object_property name="BB04" property="shieldStateFront" value="0"/>
+    <set_object_property name="BB04" property="shieldStateBack" value="0"/>
+    <set_object_property name="BB05" property="shieldStateFront" value="0"/>
+    <set_object_property name="BB05" property="shieldStateBack" value="0"/-->
+    <add_ai type="CHASE_PLAYER" value1="20000" value2="10000" name="DN08" />
+    <add_ai type="CHASE_PLAYER" value1="20000" value2="10000" name="BB09" />
+    <add_ai type="CHASE_PLAYER" value1="20000" value2="10000" name="BB10" />
+    <add_ai type="CHASE_WHALE" value1="10000" name="DN08" />
+    <add_ai type="CHASE_WHALE" value1="10000" name="BB09" />
+    <add_ai type="CHASE_WHALE" value1="10000" name="BB10" />
+    <!--set_object_property name="DN08" property="shieldMaxStateFront" value="25"/>
+    <set_object_property name="DN08" property="shieldMaxStateBack" value="25"/>
+    <set_object_property name="BB09" property="shieldMaxStateFront" value="20"/>
+    <set_object_property name="BB09" property="shieldMaxStateBack" value="20"/>
+    <set_object_property name="BB10" property="shieldMaxStateFront" value="20"/>
+    <set_object_property name="BB10" property="shieldMaxStateBack" value="20"/>
+    <set_object_property name="DN08" property="shieldStateFront" value="10"/>
+    <set_object_property name="DN08" property="shieldStateBack" value="10"/>
+    <set_object_property name="BB09" property="shieldStateFront" value="0"/>
+    <set_object_property name="BB09" property="shieldStateBack" value="0"/>
+    <set_object_property name="BB10" property="shieldStateFront" value="0"/>
+    <set_object_property name="BB10" property="shieldStateBack" value="0"/-->
+    <add_ai type="CHASE_PLAYER" value1="20000" value2="10000" name="DN13" />
+    <add_ai type="CHASE_PLAYER" value1="20000" value2="10000" name="BB14" />
+    <add_ai type="CHASE_PLAYER" value1="20000" value2="10000" name="BB15" />
+    <add_ai type="CHASE_WHALE" value1="10000" name="DN13" />
+    <add_ai type="CHASE_WHALE" value1="10000" name="BB14" />
+    <add_ai type="CHASE_WHALE" value1="10000" name="BB15" />
+    <!-- set_object_property name="DN13" property="shieldMaxStateFront" value="25"/>
+    <set_object_property name="DN13" property="shieldMaxStateBack" value="25"/>
+    <set_object_property name="BB14" property="shieldMaxStateFront" value="20"/>
+    <set_object_property name="BB14" property="shieldMaxStateBack" value="20"/>
+    <set_object_property name="BB15" property="shieldMaxStateFront" value="20"/>
+    <set_object_property name="BB15" property="shieldMaxStateBack" value="20"/>
+    <set_object_property name="BB14" property="shieldStateFront" value="0"/>
+    <set_object_property name="BB14" property="shieldStateBack" value="0"/>
+    <set_object_property name="BB15" property="shieldStateFront" value="0"/>
+    <set_object_property name="BB15" property="shieldStateBack" value="0"/-->
+    <set_variable name="setup_1" value="1" integer="yes" />
+    <!--<set_timer name="shield_boost_timer" seconds="95" />-->
+    <!-- set_variable name="shield_boostable" value="1"/-->
+  </event>
+  <!-- event name="Boost enemy shields">
+    <if_variable name="shield_boostable" comparator="EQUALS" value="1"/>
+    <if_timer_finished name="shield_boost_timer"/>
+    <set_object_property name="DN03" property="shieldMaxStateFront" value="600"/>
+    <set_object_property name="DN03" property="shieldMaxStateBack" value="600"/>
+    <set_object_property name="DN08" property="shieldMaxStateFront" value="600"/>
+    <set_object_property name="DN08" property="shieldMaxStateBack" value="600"/>
+    <set_object_property name="DN13" property="shieldMaxStateFront" value="600"/>
+    <set_object_property name="DN13" property="shieldMaxStateBack" value="600"/>
+
+    <set_object_property name="BB04" property="shieldMaxStateFront" value="400"/>
+    <set_object_property name="BB04" property="shieldMaxStateBack" value="400"/>
+    <set_object_property name="BB05" property="shieldMaxStateFront" value="400"/>
+    <set_object_property name="BB05" property="shieldMaxStateBack" value="400"/>
+    <set_object_property name="BB09" property="shieldMaxStateFront" value="400"/>
+    <set_object_property name="BB09" property="shieldMaxStateBack" value="400"/>
+    <set_object_property name="BB10" property="shieldMaxStateFront" value="400"/>
+    <set_object_property name="BB10" property="shieldMaxStateBack" value="400"/>
+    
+    
+    <warning_popup_message message="Enemy shields firming up." consoles="S"/>
+    <set_variable name="shield_boostable" value="0"/>
+ </event-->
+  <event name="HELL BREAKS LOOSE" id_arme="a21cfe51-7fc5-47c9-8a8c-ff31d7570abd">
+    <if_variable name="chapter" comparator="EQUALS" value="2" />
+    <if_timer_finished name="hell_breaks_loose_timer" />
+    <if_variable name="hell_breaks_loose" comparator="EQUALS" value="0.0" />
+    <set_comms_button text="RED ALERT from Warsaw" sideValue="2" />
+    <set_variable name="hell_breaks_loose" value="1" integer="yes" />
+    <warning_popup_message message="Tachyon energy 12 gigaWatts." consoles="s" player_slot="0" />
+    <log text="First three fleets teleported in.\n\n" />
+    <!-- Change Tachyon Sources into Ships with spinning alien technology attached -->
+    <destroy name="Tachyon Source 1" />
+    <create type="genericMesh" x="98000" y="0" z="59000" name="T1A" meshFileName="dat\Missions\MISS_HamakSector\teleporter.dxs" textureFileName="dat/electricNoise2.png" colorRed="1" colorGreen="0.0" colorBlue="0.0" />
+    <set_object_property property="artScale" value="1" name="T1A" />
+    <set_object_property property="angle" value="1.505" name="T1A" />
+    <set_object_property property="rollDelta" value="3" name="T1A" />
+    <!-- To put a generic inside a ship set pushRadius =0 -->
+    <set_object_property property="pushRadius" value="0" name="T1A" />
+    <create type="genericMesh" x="98050.0" y="0" z="59000" name="T1B" meshFileName="dat\Missions\MISS_HamakSector\teleporter.dxs" textureFileName="dat/electricNoise2.png" colorRed="1" />
+    <set_object_property property="artScale" value="1" name="T1B" />
+    <set_object_property property="angle" value="1.505" name="T1B" />
+    <set_object_property property="rollDelta" value="-3" name="T1B" />
+    <set_object_property property="pushRadius" value="0" name="T1B" />
+    <create type="enemy" x="98025.0" y="0" z="59000" angle="90" name="Tachyon Source 1" hullID="4000" sideValue="1" fleetnumber="99" />
+    <set_ship_text name="Tachyon Source 1" class="Unknown" desc="Tachyon energy 0 gigaWatts." scan_desc="Generating a false target image on the edge of the sector. True location appears on the viewscreen." />
+    <set_special name="Tachyon Source 1" ship="1" captain="4" />
+    <set_object_property property="topSpeed" value="0.00001" name="Tachyon Source 1" />
+    <set_object_property property="turnRate" value="0" name="Tachyon Source 1" />
+    <set_object_property property="systemDamageImpulse" value="1" name="Tachyon Source 1" />
+    <set_object_property property="systemDamageTurning" value="1" name="Tachyon Source 1" />
+    <!-- set_object_property name="Tachyon Source 1" property="shieldMaxStateFront" value="20"/>
+   <set_object_property name="Tachyon Source 1" property="shieldMaxStateBack" value="20"/-->
+    <destroy name="Tachyon Source 2" />
+    <create type="genericMesh" x="98000" y="0" z="19000" name="T2A" meshFileName="dat\Missions\MISS_HamakSector\teleporter.dxs" textureFileName="dat/electricNoise2.png" colorRed="1" />
+    <set_special name="Tachyon Source 2" ship="1" captain="4" />
+    <set_object_property property="artScale" value="1" name="T2A" />
+    <set_object_property property="angle" value="1.505" name="T2A" />
+    <set_object_property property="rollDelta" value="5" name="T2A" />
+    <set_object_property property="pushRadius" value="0" name="T2A" />
+    <create type="genericMesh" x="98025.0" y="0" z="19000" name="T2B" meshFileName="dat\Missions\MISS_HamakSector\teleporter.dxs" textureFileName="dat/electricNoise2.png" colorRed="1" />
+    <set_object_property property="artScale" value="1" name="T2B" />
+    <set_object_property property="angle" value="1.505" name="T2B" />
+    <set_object_property property="rollDelta" value="-5" name="T2B" />
+    <set_object_property property="pushRadius" value="0" name="T2B" />
+    <create type="enemy" x="98050.0" y="0" z="19000" angle="90" name="Tachyon Source 2" hullID="4000" sideValue="1" fleetnumber="99" />
+    <set_special name="Tachyon Source 3" ship="1" captain="4" />
+    <set_ship_text name="Tachyon Source 2" class="Unknown" desc="Tachyon energy 0 gigaWatts." scan_desc="Generating a false target image on the edge of the sector. True location appears on the viewscreen." />
+    <set_object_property property="topSpeed" value="0.00001" name="Tachyon Source 2" />
+    <set_object_property property="turnRate" value="0" name="Tachyon Source 2" />
+    <set_object_property property="systemDamageImpulse" value="1" name="Tachyon Source 2" />
+    <set_object_property property="systemDamageTurning" value="1" name="Tachyon Source 2" />
+    <!-- set_object_property name="Tachyon Source 2" property="shieldMaxStateFront" value="20"/>
+  <set_object_property name="Tachyon Source 2" property="shieldMaxStateBack" value="20"/-->
+    <destroy name="Tachyon Source 3" />
+    <create type="genericMesh" x="59000" y="0" z="1600" name="T3A" meshFileName="dat\Missions\MISS_HamakSector\teleporter.dxs" textureFileName="dat/electricNoise2.png" colorRed="1" />
+    <set_object_property property="artScale" value="1" name="T3A" />
+    <set_object_property property="angle" value="3.1415" name="T3A" />
+    <set_object_property property="rollDelta" value="5" name="T3A" />
+    <set_object_property property="pushRadius" value="0" name="T3A" />
+    <create type="genericMesh" x="59000.0" y="0" z="1625.0" name="T3B" meshFileName="dat\Missions\MISS_HamakSector\teleporter.dxs" textureFileName="dat/electricNoise2.png" colorRed="1" />
+    <set_object_property property="artScale" value="1" name="T3B" />
+    <set_object_property property="angle" value="3.1415" name="T3B" />
+    <set_object_property property="rollDelta" value="-5" name="T3B" />
+    <set_object_property property="pushRadius" value="0" name="T3B" />
+    <create type="enemy" x="59000" y="0" z="1650.0" angle="180" name="Tachyon Source 3" hullID="4000" sideValue="1" fleetnumber="99" />
+    <set_ship_text name="Tachyon Source 3" class="Unknown" desc="Tachyon energy 0 gigaWatts." scan_desc="Generating a false target image on the edge of the sector. True location appears on the viewscreen." />
+    <set_object_property property="topSpeed" value="0.00001" name="Tachyon Source 3" />
+    <set_object_property property="turnRate" value="0" name="Tachyon Source 3" />
+    <set_object_property property="systemDamageImpulse" value="1" name="Tachyon Source 3" />
+    <set_object_property property="systemDamageTurning" value="1" name="Tachyon Source 3" />
+    <!-- set_object_property name="Tachyon Source 3" property="shieldMaxStateFront" value="20"/>
+   <set_object_property name="Tachyon Source 3" property="shieldMaxStateBack" value="20"/-->
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\teleport.wav" />
+    <!--- Deploy the Torgoths -->
+    <create type="enemy" x="58800" y="0" z="2800" angle="180" name="DN03" hullID="4002" sideValue="1" fleetnumber="1" />
+    <create type="enemy" x="59400" y="0" z="2900" angle="180" name="BB04" hullID="4001" sideValue="1" fleetnumber="1" />
+    <create type="enemy" x="58600" y="0" z="2900" angle="180" name="BB05" hullID="4001" sideValue="1" fleetnumber="1" />
+    <set_special name="DN03" ship="1" captain="5" />
+    <set_special name="BB04" ship="1" captain="5" />
+    <set_special name="BB05" ship="1" captain="5" />
+    <create type="enemy" x="98000" y="0" z="59000" angle="90" name="DN08" hullID="4002" sideValue="1" fleetnumber="2" />
+    <create type="enemy" x="97500" y="0" z="59400" angle="90" name="BB09" hullID="4001" sideValue="1" fleetnumber="2" />
+    <create type="enemy" x="97500" y="0" z="58600" angle="90" name="BB10" hullID="4001" sideValue="1" fleetnumber="2" />
+    <set_special name="DN08" captain="4" />
+    <set_special name="BB09" captain="4" />
+    <set_special name="BB10" captain="0" />
+    <create type="enemy" x="98000" y="500" z="19000" angle="180" name="DN12" hullID="4002" sideValue="1" fleetnumber="3" />
+    <create type="enemy" x="98000" y="-500" z="19000" angle="180" name="DN13" hullID="4002" sideValue="1" fleetnumber="3" />
+    <create type="enemy" x="97500" y="0" z="19400" angle="90" name="BB14" hullID="4001" sideValue="1" fleetnumber="3" />
+    <create type="enemy" x="97500" y="0" z="18600" angle="90" name="BB15" hullID="4001" sideValue="1" fleetnumber="3" />
+    <set_special name="DN13" ship="2" captain="3" />
+    <set_special name="BB14" ship="2" captain="4" />
+    <set_special name="BB15" ship="2" captain="5" />
+    <!-- Science can scan Warsaw again, just in time to see its fate. Or not? -->
+    <create type="neutral" x="59000" y="0" z="4000" angle="0" name="Warsaw" hullID="1501" sideValue="2" />
+    <set_ship_text name="Warsaw" race="TSN" class="Heavy Destroyer" desc="Captain Amelia Haynes commanding" scan_desc="Library Computer: Captain Haynes has an outstanding battle record." />
+    <set_special name="Warsaw" ship="1.0" captain="5.0" />
+    <set_timer name="setup_1_timer" seconds="5" />
+  </event>
+  <event name="Red Alert 1" id_arme="1ae6077b-b4dd-4ba2-839c-19f6a1397496">
+    <if_comms_button text="RED ALERT from Warsaw" />
+    <if_variable name="hell_breaks_loose" comparator="EQUALS" value="1.0" />
+    <clear_comms_button text="RED ALERT from Warsaw" sideValue="2" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\Haynes_battlestations.wav" />
+    <set_timer name="hell_breaks_loose_timer" seconds="0" />
+    <set_variable name="hell_breaks_loose" value="2.0" integer="yes" />
+  </event>
+  <event name="Red Alert 2" id_arme="d2abdc1d-6796-4bde-b389-a440d2d4b019">
+    <if_timer_finished name="hell_breaks_loose_timer" />
+    <if_variable name="hell_breaks_loose" comparator="EQUALS" value="2.0" />
+    <incoming_comms_text from="Captain Haynes on Warsaw" sideValue="2" type="FRIEND">Haynes to Artemis. Go to battlestations! A Torgoth fleet just appeared at the tachyon source. Their weapons are armed and locked on us. The armpit of the galaxy just became the front line in a gut-busting, mother-lovin' starship war! Let's give 'em hell!</incoming_comms_text>
+    <set_variable name="hell_breaks_loose" value="3.0" integer="yes" />
+  </event>
+  <!-- Keep teleporter ships stationary -->
+  <event name="Tachyon Stay Put 1" id_arme="bcb53b50-e24d-4fa8-8799-6cbde022111f">
+    <if_exists name="T1A" />
+    <if_exists name="Tachyon Source 1" />
+    <set_relative_position name2="Tachyon Source 1" distance="15" angle="0" name1="T1A" />
+    <set_object_property property="throttle" value="0" name="Tachyon Source 1" />
+    <set_object_property property="systemDamageImpulse" value="1" name="Tachyon Source 1" />
+    <set_object_property property="systemDamageTurning" value="1" name="Tachyon Source 1" />
+  </event>
+  <event name="Tachyon Stay Put 2" id_arme="c71a4def-62a4-4973-900b-314154cc92fe">
+    <if_exists name="T2A" />
+    <if_exists name="Tachyon Source 2" />
+    <set_relative_position name2="Tachyon Source 2" distance="15" angle="0" name1="T2A" />
+    <set_object_property property="throttle" value="0" name="Tachyon Source 2" />
+    <set_object_property property="systemDamageImpulse" value="1" name="Tachyon Source 2" />
+    <set_object_property property="systemDamageTurning" value="1" name="Tachyon Source 2" />
+  </event>
+  <event name="Tachyon Stay Put 3" id_arme="65f350a9-1fa0-4aff-8b7c-3fe727ebb32b">
+    <if_exists name="T3A" />
+    <if_exists name="Tachyon Source 3" />
+    <set_relative_position name2="Tachyon Source 3" distance="15" angle="0" name1="T3A" />
+    <set_object_property property="throttle" value="0" name="Tachyon Source 3" />
+    <set_object_property property="systemDamageImpulse" value="1" name="Tachyon Source 3" />
+    <set_object_property property="systemDamageTurning" value="1" name="Tachyon Source 3" />
+  </event>
+  <!-- If Tachyon ships are destroyed also destroy teleporters -->
+  <event name="Tachyon Go Away 1" id_arme="19627f8c-3852-4234-ac71-ff12da92ddc6">
+    <if_not_exists name="Tachyon Source 1" />
+    <if_exists name="T1A" />
+    <destroy name="T1A" />
+    <destroy name="T1B" />
+  </event>
+  <event name="Tachyon Go Away 2" id_arme="bea6a226-65e8-4024-8d86-96d5131ff2e1">
+    <if_not_exists name="Tachyon Source 2" />
+    <if_exists name="T2A" />
+    <destroy name="T2A" />
+    <destroy name="T2B" />
+  </event>
+  <event name="Tachyon Go Away 3" id_arme="9cca79ea-dacf-4f97-9bcf-a01d4677690c">
+    <if_not_exists name="Tachyon Source 3" />
+    <if_exists name="T3A" />
+    <destroy name="T3A" />
+    <destroy name="T3B" />
+  </event>
+  <!-- Admiral Weeks doesn't take the news well -->
+  <event name="Weeks Responds to Hell 1" id_arme="837a7c54-6ed0-41f5-8ace-c91c46a5f6a9">
+    <if_variable name="chapter" comparator="EQUALS" value="2" />
+    <if_timer_finished name="my_god_timer" />
+    <if_variable name="my_god" comparator="EQUALS" value="0.0" />
+    <set_comms_button text="Response from Adm. Weeks" sideValue="2" />
+    <warning_popup_message message="Tachyon levels now ZERO." consoles="s" player_slot="0" />
+    <set_object_property property="canBuild" value="1" name="Hamak Base" />
+    <log text="I think Admiral Weeks pooped his pants!\n\n" />
+    <set_variable name="my_god" value="1" integer="yes" />
+  </event>
+  <event name="Weeks Responds to Hell 2" id_arme="3636be73-c680-414a-8efb-da09b5484e70">
+    <if_comms_button text="Response from Adm. Weeks" />
+    <if_variable name="my_god" comparator="EQUALS" value="1.0" />
+    <clear_comms_button text="Response from Adm. Weeks" sideValue="2" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\Weeks_my_god.wav" />
+    <set_timer name="my_god_timer" seconds="9" />
+    <set_variable name="my_god" value="2.0" integer="yes" />
+  </event>
+  <event name="Weeks Responds to Hell 3" id_arme="e98eaadd-7b1c-4b17-8f8a-024d9d47e075">
+    <if_timer_finished name="my_god_timer" />
+    <if_variable name="my_god" comparator="EQUALS" value="2.0" />
+    <incoming_comms_text from="Admiral Weeks" sideValue="2" type="FRIEND">My God, look at all thost Torgoths! Warsaw and Artemis, you must hold them off as long as possible. The Syndicate needs to haul a lot of merchandise away from this base.</incoming_comms_text>
+    <set_variable name="my_god" value="3.0" integer="yes" />
+  </event>
+  <!-- Captain Haynes sends her final message -->
+  <event name="FUBAR Message 1" id_arme="6fe8fc28-6903-4486-aeaa-a228848e0276">
+    <if_variable name="chapter" comparator="EQUALS" value="2" />
+    <if_timer_finished name="no_minefield_timer" />
+    <if_variable name="no_minefield" comparator="EQUALS" value="0.0" />
+    <set_comms_button text="Mayday from Warsaw" sideValue="2" />
+    <set_variable name="no_minefield" value="1" integer="yes" />
+  </event>
+  <event name="FUBAR Message 2" id_arme="b4c58ca7-06f5-451f-94aa-f368bfd1ce04">
+    <if_comms_button text="Mayday from Warsaw" />
+    <if_variable name="no_minefield" comparator="EQUALS" value="1" />
+    <clear_comms_button text="Mayday from Warsaw" sideValue="2" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\Haynes_fubared.wav" />
+    <set_timer name="no_minefield_timer" seconds="11" />
+    <set_variable name="no_minefield" value="2.0" integer="yes" />
+  </event>
+  <event name="FUBAR Message 3" id_arme="dfd869af-c758-453a-8277-d0b6edb5ae05">
+    <if_timer_finished name="no_minefield_timer" />
+    <if_variable name="no_minefield" comparator="EQUALS" value="2.0" />
+    <incoming_comms_text from="Captain Haynes on Warsaw" sideValue="2" type="FRIEND">Haynes to Artemis. There's another ship called the Chicago at Hamak Base, but Squeaks won't send it to reinforce us. He left us totally FUBARed! If you ever see Squeaks again, you can tell him to kiss my a-#(*&amp;0_!@.1.//#$ [[Signal Lost]]</incoming_comms_text>
+    <set_timer name="no_minefield_timer" seconds="5" />
+    <set_variable name="no_minefield" value="3.0" integer="yes" />
+  </event>
+  <event name="FUBAR Message 4" id_arme="7eac768f-a1f6-40d7-ae00-7bf19440061c">
+    <if_timer_finished name="no_minefield_timer" />
+    <if_variable name="no_minefield" comparator="EQUALS" value="3.0" />
+    <incoming_comms_text from="Admiral Weeks" sideValue="2" type="FRIEND">Weeks to Warsaw! Weeks to Warsaw! Miss Haynes, please respond!</incoming_comms_text>
+    <set_variable name="no_minefield" value="4.0" integer="yes" />
+  </event>
+  <!-- Looks like Warsaw is toast! -->
+  <event name="Warsaw Gone" id_arme="191e3bc0-3b2a-4011-8aae-f09d76f9fa44">
+    <if_variable name="chapter" comparator="EQUALS" value="2" />
+    <if_timer_finished name="Warsaw_gone_timer" />
+    <destroy name="Warsaw" />
+    <warning_popup_message message="Signal from Warsaw lost." consoles="c" player_slot="0" />
+    <set_variable name="chapter" value="3" integer="yes" />
+    <log text="Chapter 3\n\n" />
+  </event>
+  <!-- Chapter 3: Unless Artemis destroys the teleport ships, Torgoth squadrons will never stop coming -->
+  <!-- Set squadrons timers the first time -->
+  <event name="Squadron Setup" id_arme="6e91fc86-2f7b-4ac4-890a-811ff863f928">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="chapter_3_setup" comparator="NOT" value="1" />
+    <set_timer name="tachyon_warning_timer01" seconds="40" />
+    <set_timer name="tachyon_warning_timer02" seconds="80" />
+    <set_timer name="tachyon_warning_timer03" seconds="120" />
+    <set_timer name="tachyon_warning_timer04" seconds="160" />
+    <set_timer name="tachyon_warning_timer05" seconds="200" />
+    <set_timer name="tachyon_warning_timer06" seconds="240" />
+    <set_timer name="tachyon_warning_timer07" seconds="280" />
+    <set_timer name="tachyon_warning_timer08" seconds="320" />
+    <set_timer name="tachyon_warning_timer09" seconds="360" />
+    <set_timer name="tachyon_warning_timer10" seconds="400" />
+    <set_timer name="tachyon_warning_timer11" seconds="450" />
+    <set_timer name="tachyon_warning_timer12" seconds="500" />
+    <set_timer name="tachyon_warning_timer12b" seconds="550" />
+    <set_timer name="warsaw_coming_timer" seconds="370" />
+    <set_variable name="chapter_3_setup" value="1" integer="yes" />
+  </event>
+  <!-- A message from Warsaw! -->
+  <!-- Note: Can only happen if Artemis isn't too close to edge of sector -->
+  <event name="Not Dead 1" id_arme="ccccd487-c69f-44be-83e6-e59aa3634503">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="warsaws_coming" comparator="EQUALS" value="0.0" />
+    <if_object_property property="positionX" player_slot="0" comparator="LESS" value="92000" />
+    <if_object_property property="positionZ" player_slot="0" comparator="GREATER" value="8000" />
+    <if_timer_finished name="warsaw_coming_timer" />
+    <set_comms_button text="Not Dead" sideValue="2" />
+    <set_timer name="warsaw_reappear_timer" seconds="7" />
+    <set_timer name="weeks_escape_timer1" seconds="30" />
+    <set_timer name="weeks_escape_timer2" seconds="80" />
+    <set_timer name="weeks_escape_timer3" seconds="125" />
+    <set_timer name="weeks_escape_timer4" seconds="170" />
+    <set_variable name="warsaws_coming" value="1" integer="yes" />
+  </event>
+  <event name="Not Dead 2" id_arme="7ba9efa6-933f-4718-85ea-870c774bb018">
+    <if_variable name="warsaws_coming" comparator="EQUALS" value="1" />
+    <if_comms_button text="Not Dead" />
+    <clear_comms_button text="Not Dead" sideValue="2" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\Haynes_not_dead.wav" />
+    <set_timer name="warsaw_coming_timer" seconds="7" />
+    <set_variable name="warsaws_coming" value="2.0" integer="yes" />
+  </event>
+  <event name="Not Dead 3" id_arme="0e52e3cf-013b-4ac6-b128-a33a475e2774">
+    <if_variable name="warsaws_coming" comparator="EQUALS" value="2.0" />
+    <if_timer_finished name="warsaw_coming_timer" />
+    <incoming_comms_text from="Captain Haynes on Warsaw" sideValue="2" type="FRIEND">Haynes to Artemis. Glad you're not dead! We've chased this Torgy-bastard halfway across the nebula. Help us finish him off. </incoming_comms_text>
+    <set_variable name="warsaws_coming" value="3.0" integer="yes" />
+  </event>
+  <!-- Warsaw gets an Advantage -->
+  <event name="Prime Warsaw for a Fight" id_arme="f407ca53-a639-4af1-bdc3-40f8e34d94bf">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="warsaws_back2" comparator="NOT" value="1" />
+    <if_variable name="warsaws_back" comparator="EQUALS" value="1" />
+    <set_object_property property="topSpeed" value="3.5" name="Warsaw" />
+    <set_object_property property="turnRate" value="1/100" name="Warsaw" />
+    <set_object_property property="shieldMaxStateFront" value="400" name="BB03" />
+    <set_object_property property="shieldMaxStateBack" value="400" name="BB03" />
+    <set_object_property property="shieldStateFront" value="327" name="BB03" />
+    <set_object_property property="shieldStateBack" value="309" name="BB03" />
+    <set_variable name="warsaws_back2" value="1" integer="yes" />
+  </event>
+  <!-- Return of the Warsaw -->
+  <event name="Warsaw's Back" id_arme="2267aadd-2eaf-4c51-96dc-b3822cd37fe6">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="warsaws_back" comparator="NOT" value="1" />
+    <if_timer_finished name="warsaw_reappear_timer" />
+    <create type="neutral" x="59000" y="0" z="18500" angle="0" name="Warsaw" hullID="1501" sideValue="2" />
+    <set_ship_text name="Warsaw" race="TSN" class="Heavy Destroyer" desc="This ship has sustained severe damage and casualties, but they have made repairs." scan_desc="The Engine Room is bypassed like a plate of spaghetti." />
+    <set_special name="Warsaw" ship="0" captain="5" />
+    <destroy name="BB03" />
+    <create type="enemy" x="59000" y="0" z="1600" angle="180" name="BB03" hullID="4001" sideValue="1" fleetnumber="90" />
+    <set_relative_position name2="BB03" distance="1700" angle="0" player_slot1="0" />
+    <copy_object_property property="angle" player_slot1="0" name2="BB03" />
+    <addto_object_property value="3.14159" property="angle" name="BB03" />
+    <set_relative_position name2="Warsaw" distance="2400" angle="0" player_slot1="0" />
+    <copy_object_property property="angle" player_slot1="0" name2="Warsaw" />
+    <addto_object_property value="3.14159" property="angle" name="Warsaw" />
+    <set_object_property property="shieldMaxStateFront" value="200" name="Warsaw" />
+    <set_object_property property="shieldMaxStateBack" value="150" name="Warsaw" />
+    <clear_ai name="Warsaw" />
+    <add_ai type="CHASE_AI_SHIP" value1="59000" value2="40000" name="Warsaw" />
+    <add_ai type="FOLLOW_COMMS_ORDERS" name="Warsaw" />
+    <add_ai type="DEFEND" value1="9000" value2="4000" name="Warsaw" />
+    <set_variable name="warsaws_back" value="1" integer="yes" />
+  </event>
+  <!-- Escape of Admiral Weeks -->
+  <!-- First a Freighter -->
+  <event name="First GW 214 Escape 1" id_arme="72351f16-9700-4a2d-a253-300fa8b5078d">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="weeks_escape1" comparator="EQUALS" value="0.0" />
+    <if_timer_finished name="weeks_escape_timer1" />
+    <set_comms_button text="Goodbye from GW 214" sideValue="2" />
+    <set_object_property property="topSpeed" value="2" name="GW Unlimited 214" />
+    <clear_ai name="GW Unlimited 214" />
+    <add_ai type="POINT_THROTTLE" value1="10000" value2="0" value3="100000" value4="1" name="GW Unlimited 214" />
+    <set_variable name="weeks_escape1" value="1" integer="yes" />
+  </event>
+  <event name="First GW 214 Escape 2" id_arme="e6f7e2c8-ea52-4873-b4a1-01af30f51488">
+    <if_variable name="weeks_escape1" comparator="EQUALS" value="1.0" />
+    <if_comms_button text="Goodbye from GW 214" />
+    <clear_comms_button text="Goodbye from GW 214" sideValue="2" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\GW_214_goodbye.wav" />
+    <set_timer name="weeks_escape_timer1" seconds="6" />
+    <set_variable name="weeks_escape1" value="2.0" integer="yes" />
+  </event>
+  <event name="First GW 214 Escape 3" id_arme="42f0f147-5a2e-4ab2-a74b-d6746b269f87">
+    <if_variable name="weeks_escape1" comparator="EQUALS" value="2.0" />
+    <if_timer_finished name="weeks_escape_timer1" />
+    <incoming_comms_text from="GW 214" sideValue="2" type="FRIEND">Departing Hamak Base on course for the alternate rendezvous. Good luck with your little alien war problem.</incoming_comms_text>
+    <set_variable name="weeks_escape1" value="3.0" integer="yes" />
+  </event>
+  <!-- Then two freighters -->
+  <event name="Two Freighters Escape 1" id_arme="caa036d9-254c-44d4-896c-7a6eefd95dd8">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="weeks_escape2" comparator="EQUALS" value="0.0" />
+    <if_timer_finished name="weeks_escape_timer2" />
+    <set_comms_button text="Goodbye from GW 189" sideValue="2" />
+    <clear_ai name="GW Unlimited 157" />
+    <add_ai type="POINT_THROTTLE" value1="10000" value2="0" value3="100000" value4="1" name="GW Unlimited 157" />
+    <create type="neutral" x="25100" y="0" z="81110" angle="175" name="GW Unlimited 189" hullID="1503" sideValue="2" />
+    <clear_ai name="GW Unlimited 189" />
+    <set_special name="GW Unlimited 189" ship="1" captain="0" />
+    <add_ai type="POINT_THROTTLE" value1="10000" value2="0" value3="100000" value4="1" name="GW Unlimited 189" />
+    <set_object_property property="topSpeed" value="2" name="GW Unlimited 214" />
+    <set_variable name="weeks_escape2" value="1" integer="yes" />
+  </event>
+  <event name="Two Freighters Escape 2" id_arme="fdb50d13-45bc-4fb4-af2a-3c622d4aa494">
+    <if_variable name="weeks_escape2" comparator="EQUALS" value="1" />
+    <if_comms_button text="Goodbye from GW 189" />
+    <clear_comms_button text="Goodbye from GW 189" sideValue="2" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\GW_189_goodbye.wav" />
+    <set_timer name="weeks_escape_timer2" seconds="5" />
+    <set_variable name="weeks_escape2" value="2.0" integer="yes" />
+  </event>
+  <event name="Two Freighters Escape 3" id_arme="c21936d2-5c9f-4185-b223-15ab15f953f2">
+    <if_variable name="weeks_escape2" comparator="EQUALS" value="2.0" />
+    <if_comms_button text="Goodbye from GW 189" />
+    <incoming_comms_text from="GW 189" sideValue="2" type="FRIEND">Goodbye Hamak Sector. You were a profitable place while you lasted!</incoming_comms_text>
+    <set_variable name="weeks_escape2" value="3.0" integer="yes" />
+  </event>
+  <!-- Then two freighters and a destroyer -->
+  <!-- Weeks is aboard Chicago -->
+  <event name="Weeks Escapes on Chicago 1" id_arme="38092670-6a81-4103-8e62-1831efda9e74">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="weeks_escape3" comparator="EQUALS" value="0.0" />
+    <if_timer_finished name="weeks_escape_timer3" />
+    <set_comms_button text="Goodbye from Adm. Weeks" sideValue="2" />
+    <create type="neutral" x="24980" y="0" z="78980" angle="175" name="GW Unlimited 101" hullID="1503" sideValue="2" />
+    <clear_ai name="GW Unlimited 101" />
+    <add_ai type="POINT_THROTTLE" value1="10000" value2="0" value3="100000" value4="1" name="GW Unlimited 101" />
+    <set_special name="GW Unlimited 101" ship="1" captain="0" />
+    <create type="neutral" x="25100" y="0" z="81110" angle="175" name="GW Unlimited 115" hullID="1503" sideValue="2" />
+    <clear_ai name="GW Unlimited 115" />
+    <add_ai type="POINT_THROTTLE" value1="10000" value2="0" value3="100000" value4="1" name="GW Unlimited 115" />
+    <set_object_property property="topSpeed" value="2" name="GW Unlimited 189" />
+    <set_object_property property="topSpeed" value="2" name="GW Unlimited 157" />
+    <set_special name="GW Unlimited 101" ship="1" captain="0" />
+    <create type="neutral" x="25000" y="0" z="81100" angle="175" name="Chicago" hullID="1501" sideValue="2" />
+    <clear_ai name="Chicago" />
+    <add_ai type="POINT_THROTTLE" value1="10000" value2="0" value3="100000" value4="1" name="Chicago" />
+    <set_object_property property="topSpeed" value="3" name="Chicago" />
+    <set_special name="Chicago" ship="2" captain="0" />
+    <warning_popup_message message="aboard Starship Chicago." consoles="S" player_slot="0" />
+    <warning_popup_message message="Admiral Weeks security credentials confirmed" consoles="S" player_slot="0" />
+    <set_variable name="weeks_escape3" value="1" integer="yes" />
+  </event>
+  <event name="Weeks Escapes on Chicago 2" id_arme="404bbdaf-9cad-4bd6-8871-d73bfd20a7d5">
+    <if_variable name="weeks_escape3" comparator="EQUALS" value="1.0" />
+    <if_comms_button text="Goodbye from Adm. Weeks" />
+    <clear_comms_button text="Goodbye from Adm. Weeks" sideValue="2" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\Weeks_goodbye.wav" />
+    <set_timer name="weeks_escape_timer3" seconds="16" />
+    <set_variable name="weeks_escape3" value="2.0" integer="yes" />
+  </event>
+  <event name="Weeks Escapes on Chicago 3" id_arme="df031456-f098-463c-8cf3-a6ee331ff83c">
+    <if_variable name="weeks_escape3" comparator="EQUALS" value="2.0" />
+    <if_timer_finished name="weeks_escape_timer3" />
+    <incoming_comms_text from="Admiral Weeks on Chicago" sideValue="2" type="FRIEND">Hello, Artemis. This is Giles Weeks. I'm going to Tau Ceti for, um... reinforcements. Hold out as long as you can. Don't worry, I'll send your Syndicate shares to your next of kin. If I can swing it, there will be posthumous medals for your entire crew. Farewell, Artemis.</incoming_comms_text>
+    <set_variable name="weeks_escape3" value="3.0" integer="yes" />
+  </event>
+  <!-- If something happened to Warsaw bring it back NOW. -->
+  <!-- This can only happen here so Haynes can deliver a line. -->
+  <event name="Re-prime Warsaw" id_arme="1a56dca9-35ca-44b0-b6f1-208024f9598f">
+    <if_variable name="remake_Warsaw" comparator="EQUALS" value="1" />
+    <set_object_property property="topSpeed" value="3.1" name="Warsaw" />
+    <set_object_property property="turnRate" value="1/60" name="Warsaw" />
+    <set_object_property property="shieldMaxStateFront" value="150" name="Warsaw" />
+    <set_object_property property="shieldMaxStateBack" value="140" name="Warsaw" />
+    <set_variable name="remake_Warsaw" value="0" integer="yes" />
+  </event>
+  <event name="Remake Warsaw" id_arme="ab825828-0f0d-44da-a496-7aebb599565c">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="weeks_escape4" comparator="NOT" value="1" />
+    <if_variable name="remake_Warsaw" comparator="NOT" value="1" />
+    <if_timer_finished name="weeks_escape_timer4" />
+    <if_not_exists name="Warsaw" />
+    <create type="neutral" x="50000" y="0" z="50000" angle="0" name="Warsaw" hullID="1501" sideValue="2" />
+    <set_ship_text name="Warsaw" race="TSN" class="Heavy Destroyer" desc="This ship has sustained severe damage and casualties but is still battle worthy." scan_desc="The crew is making rude gestures at the Torgoths." />
+    <set_special name="Warsaw" ship="0" captain="5" />
+    <add_ai type="FOLLOW_COMMS_ORDERS" name="Warsaw" />
+    <set_variable name="remake_Warsaw" value="1" integer="yes" />
+  </event>
+  <!-- Finally two more freighters -->
+  <event name="Haynes Will Follow 1" id_arme="83c30894-5eb4-41b7-8cef-ccf790583703">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="weeks_escape4" comparator="EQUALS" value="0.0" />
+    <if_timer_finished name="weeks_escape_timer4" />
+    <set_comms_button text="Warsaw Reporting In" sideValue="2" />
+    <create type="neutral" x="24980" y="0" z="79980" angle="175" name="GW Unlimited 194" hullID="1503" sideValue="2" />
+    <clear_ai name="GW Unlimited 194" />
+    <set_special name="GW Unlimited 194" ship="1" captain="0" />
+    <add_ai type="POINT_THROTTLE" value1="10000" value2="0" value3="100000" value4="1" name="GW Unlimited 194" />
+    <set_object_property property="topSpeed" value="2" name="GW Unlimited 101" />
+    <set_object_property property="topSpeed" value="2" name="GW Unlimited 115" />
+    <set_object_property property="topSpeed" value="2" name="Chicago" />
+    <create type="neutral" x="25100" y="0" z="80110" angle="175" name="GW Unlimited 208" hullID="1503" sideValue="2" />
+    <clear_ai name="GW Unlimited 208" />
+    <set_special name="GW Unlimited 208" ship="1" captain="0" />
+    <add_ai type="POINT_THROTTLE" value1="10000" value2="0" value3="100000" value4="1" name="GW Unlimited 208" />
+    <set_object_property property="topSpeed" value="2" name="GW Unlimited 208" />
+    <warning_popup_message message="no reenforcements at Tau Ceti." consoles="S" player_slot="0" />
+    <warning_popup_message message="LIBRARY COMPUTER: TSN has" consoles="S" player_slot="0" />
+    <set_variable name="weeks_escape4" value="1" integer="yes" />
+  </event>
+  <event name="Haynes Will Follow 2" id_arme="feb379cf-e89c-48ae-8f74-d4528076bbab">
+    <if_variable name="weeks_escape4" comparator="EQUALS" value="1.0" />
+    <if_comms_button text="Warsaw Reporting In" />
+    <clear_comms_button text="Warsaw Reporting In" sideValue="2" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\Haynes_will_follow.wav" />
+    <set_timer name="weeks_escape_timer4" seconds="10" />
+    <set_variable name="weeks_escape4" value="2.0" integer="yes" />
+  </event>
+  <event name="Haynes Will Follow 3" id_arme="5d59a4a6-5b69-4a25-b433-9521ec99e7eb">
+    <if_variable name="weeks_escape4" comparator="EQUALS" value="2.0" />
+    <if_timer_finished name="weeks_escape_timer4" />
+    <incoming_comms_text from="Captain Haynes on Warsaw" sideValue="2" type="FRIEND">Haynes to Artemis. As I suspected, Weeks ran away from the battlefield. That leaves you in charge. Warsaw will follow your orders. Let's hit these Torgies hard.</incoming_comms_text>
+    <set_variable name="weeks_escape4" value="3.0" integer="yes" />
+  </event>
+  <!-- Destroy cargo ships as they leave -->
+  <event name="Destroy Acme Arms Dealer" id_arme="50088ac3-4444-49c2-a71e-a8fbaed0c792">
+    <if_inside_box name="Acme Arms Dealer" leastX="100" leastZ="99000" mostX="92000" mostZ="100000" />
+    <destroy name="Acme Arms Dealer" />
+  </event>
+  <event name="Destroy GW 208" id_arme="dd557426-a3e9-4a17-8457-4102c6a6df5e">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_inside_box name="GW Unlimited 208" leastX="100" leastZ="99000" mostX="92000" mostZ="100000" />
+    <destroy name="GW Unlimited 208" />
+  </event>
+  <event name="Destroy GW 214" id_arme="931efcdb-9d10-4fbb-8c5b-02e2101a22aa">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_inside_box name="GW Unlimited 214" leastX="100" leastZ="99000" mostX="92000" mostZ="100000" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\GW_157_vacating.wav" />
+    <destroy name="GW Unlimited 214" />
+  </event>
+  <event name="Destroy GW 189" id_arme="ffb8db56-cd24-4dfc-87a0-e54a1b8b4dd4">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_inside_box name="GW Unlimited 189" leastX="100" leastZ="99000" mostX="92000" mostZ="100000" />
+    <destroy name="GW Unlimited 189" />
+  </event>
+  <event name="Destroy GW 101" id_arme="1d47df66-7538-4a84-a7ea-7851fcd1d1b9">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_inside_box name="GW Unlimited 101" leastX="100" leastZ="99000" mostX="92000" mostZ="100000" />
+    <destroy name="GW Unlimited 101" />
+  </event>
+  <event name="Destroy GW 115" id_arme="75288e8c-be63-4521-9b21-36d08a542850">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_inside_box name="GW Unlimited 115" leastX="100" leastZ="99000" mostX="92000" mostZ="100000" />
+    <destroy name="GW Unlimited 115" />
+  </event>
+  <event name="Destroy Chicago" id_arme="6a719e1c-7bca-405a-8801-885ac5d704a6">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_inside_box name="Chicago" leastX="100" leastZ="99000" mostX="92000" mostZ="100000" />
+    <destroy name="Chicago" />
+  </event>
+  <event name="Destroy GW 194" id_arme="a77cba06-9c49-45b4-94f8-7a631c4a4ade">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_inside_box name="GW Unlimited 194" leastX="100" leastZ="99000" mostX="92000" mostZ="100000" />
+    <destroy name="GW Unlimited 194" />
+  </event>
+  <event name="Destroy GW 208" id_arme="14f374ae-e090-42d6-a0f9-42bf35a1005a">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_inside_box name="GW Unlimited 208" leastX="100" leastZ="99000" mostX="92000" mostZ="100000" />
+    <destroy name="GW Unlimited 208" />
+  </event>
+  <event name="Destroy GW 157" id_arme="50fb47e6-c6d4-4328-807b-2ee9dfa0fd53">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_inside_box name="GW Unlimited 157" leastX="100" leastZ="99000" mostX="92000" mostZ="100000" />
+    <if_variable name="vacating" comparator="EQUALS" value="0.0" />
+    <set_comms_button text="Goodbye from GW 157" sideValue="2" />
+    <destroy name="GW Unlimited 157" />
+    <set_variable name="vacating" value="1.0" integer="yes" />
+  </event>
+  <event name="GW 157 Vacating 1" id_arme="c41c384d-0e06-40b5-afb8-1426053f8fd8">
+    <if_variable name="vacating" comparator="EQUALS" value="1.0" />
+    <if_comms_button text="Goodbye from GW 157" />
+    <clear_comms_button text="Goodbye from GW 157" sideValue="2" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\GW_157_vacating.wav" />
+    <set_timer name="text_timer" seconds="6" />
+    <set_variable name="vacating" value="2.0" integer="yes" />
+  </event>
+  <event name="GW 157 Vacating 2" id_arme="ea22cbd0-75b9-408d-bbce-a513fa201a85">
+    <if_variable name="vacating" comparator="EQUALS" value="2.0" />
+    <if_timer_finished name="text_timer" />
+    <incoming_comms_text from="GW 157" sideValue="2" type="FRIEND">This is Golf Whiskey One Five Seven. We are vacating this sector. Good luck, Hamak Base. You're going to need it.</incoming_comms_text>
+    <set_variable name="vacating" value="3.0" integer="yes" />
+  </event>
+  <!-- *********************************************************** -->
+  <!-- Give Science Officer twelve different Tachyon Energy updates -->
+  <!-- if the teleport ships have not been destroyed. -->
+  <!-- The teleport ships are fleet 99. -->
+  <event name="Tachyon Update 1" id_arme="01abbca0-38a1-48b6-a100-1533e00514c4">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_fleet_count comparator="GREATER" value="0" fleetnumber="99" sideValue="1" />
+    <if_timer_finished name="tachyon_warning_timer01" />
+    <if_variable name="tach_warning01" comparator="NOT" value="1" />
+    <warning_popup_message message="Tachyon energy 1.21 gigaWatts and rising." consoles="s" player_slot="0" />
+    <set_object_property property="rollDelta" value="0.5" name="T1A" />
+    <set_object_property property="rollDelta" value="-0.5" name="T1B" />
+    <set_object_property property="rollDelta" value="0.5" name="T2A" />
+    <set_object_property property="rollDelta" value="-0.5" name="T2B" />
+    <set_object_property property="rollDelta" value="0.5" name="T3A" />
+    <set_object_property property="rollDelta" value="-0.5" name="T3B" />
+    <set_ship_text name="Tachyon Source 1" desc="Tachyon energy 1 gigaWatt and rising." />
+    <set_ship_text name="Tachyon Source 2" desc="Tachyon energy 1 gigaWatt and rising." />
+    <set_ship_text name="Tachyon Source 3" desc="Tachyon energy 1 gigaWatt and rising." />
+    <set_variable name="tach_warning01" value="1" integer="yes" />
+  </event>
+  <event name="Tachyon Update 2" id_arme="76e242c6-8b9a-4283-ae59-bbb440af299c">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_fleet_count comparator="GREATER" value="0" fleetnumber="99" sideValue="1" />
+    <if_timer_finished name="tachyon_warning_timer02" />
+    <if_variable name="tach_warning02" comparator="NOT" value="1" />
+    <warning_popup_message message="Tachyon energy 2 gigaWatts and rising." consoles="s" player_slot="0" />
+    <set_object_property property="rollDelta" value="1" name="T1A" />
+    <set_object_property property="rollDelta" value="-1" name="T1B" />
+    <set_object_property property="rollDelta" value="1" name="T2A" />
+    <set_object_property property="rollDelta" value="-1" name="T2B" />
+    <set_object_property property="rollDelta" value="1" name="T3A" />
+    <set_object_property property="rollDelta" value="-1" name="T3B" />
+    <set_ship_text name="Tachyon Source 1" desc="Tachyon energy 2 gigaWatts and rising." />
+    <set_ship_text name="Tachyon Source 2" desc="Tachyon energy 2 gigaWatts and rising." />
+    <set_ship_text name="Tachyon Source 3" desc="Tachyon energy 2 gigaWatts and rising." />
+    <set_variable name="tach_warning02" value="1" integer="yes" />
+  </event>
+  <event name="Tachyon Update 3" id_arme="f42217dc-f1ac-42c2-869c-6cd8ffa7faa2">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_fleet_count comparator="GREATER" value="0" fleetnumber="99" sideValue="1" />
+    <if_timer_finished name="tachyon_warning_timer03" />
+    <if_variable name="tach_warning03" comparator="NOT" value="1" />
+    <warning_popup_message message="Tachyon energy 3 gigaWatts and rising." consoles="s" player_slot="0" />
+    <set_object_property property="rollDelta" value="1.5" name="T1A" />
+    <set_object_property property="rollDelta" value="-1.5" name="T1B" />
+    <set_object_property property="rollDelta" value="1.5" name="T2A" />
+    <set_object_property property="rollDelta" value="-1.5" name="T2B" />
+    <set_object_property property="rollDelta" value="1.5" name="T3A" />
+    <set_object_property property="rollDelta" value="-1.5" name="T3B" />
+    <set_ship_text name="Tachyon Source 1" desc="Tachyon energy 3 gigaWatts and rising." />
+    <set_ship_text name="Tachyon Source 2" desc="Tachyon energy 3 gigaWatts and rising." />
+    <set_ship_text name="Tachyon Source 3" desc="Tachyon energy 3 gigaWatts and rising." />
+    <set_variable name="tach_warning03" value="1" integer="yes" />
+  </event>
+  <event name="Tachyon Update 4" id_arme="a905e995-a17f-46e6-a53a-a794adae5fd6">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_fleet_count comparator="GREATER" value="0" fleetnumber="99" sideValue="1" />
+    <if_timer_finished name="tachyon_warning_timer04" />
+    <if_variable name="tach_warning04" comparator="NOT" value="1" />
+    <warning_popup_message message="Tachyon energy 4 gigaWatts and rising." consoles="s" player_slot="0" />
+    <set_object_property property="rollDelta" value="2" name="T1A" />
+    <set_object_property property="rollDelta" value="-2" name="T1B" />
+    <set_object_property property="rollDelta" value="2" name="T2A" />
+    <set_object_property property="rollDelta" value="-2" name="T2B" />
+    <set_object_property property="rollDelta" value="2" name="T3A" />
+    <set_object_property property="rollDelta" value="-2" name="T3B" />
+    <set_ship_text name="Tachyon Source 1" desc="Tachyon energy 4 gigaWatts and rising." />
+    <set_ship_text name="Tachyon Source 2" desc="Tachyon energy 4 gigaWatts and rising." />
+    <set_ship_text name="Tachyon Source 3" desc="Tachyon energy 4 gigaWatts and rising." />
+    <set_variable name="tach_warning04" value="1" integer="yes" />
+  </event>
+  <event name="Tachyon Update 5" id_arme="b70cbcb3-2e85-4248-af68-cc83112ca925">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_fleet_count comparator="GREATER" value="0" fleetnumber="99" sideValue="1" />
+    <if_timer_finished name="tachyon_warning_timer05" />
+    <if_variable name="tach_warning05" comparator="NOT" value="1" />
+    <warning_popup_message message="Tachyon energy 5 gigaWatts and rising." consoles="s" player_slot="0" />
+    <set_object_property property="rollDelta" value="2.5" name="T1A" />
+    <set_object_property property="rollDelta" value="-2.5" name="T1B" />
+    <set_object_property property="rollDelta" value="2.5" name="T2A" />
+    <set_object_property property="rollDelta" value="-2.5" name="T2B" />
+    <set_object_property property="rollDelta" value="2.5" name="T3A" />
+    <set_object_property property="rollDelta" value="-2.5" name="T3B" />
+    <set_ship_text name="Tachyon Source 1" desc="Tachyon energy 5 gigaWatts and rising." />
+    <set_ship_text name="Tachyon Source 2" desc="Tachyon energy 5 gigaWatts and rising." />
+    <set_ship_text name="Tachyon Source 3" desc="Tachyon energy 5 gigaWatts and rising." />
+    <set_variable name="tach_warning05" value="1" integer="yes" />
+  </event>
+  <event name="Tachyon Update 6" id_arme="0ceaa2b5-3704-4cff-84ac-112c8afc150e">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_fleet_count comparator="GREATER" value="0" fleetnumber="99" sideValue="1" />
+    <if_timer_finished name="tachyon_warning_timer06" />
+    <if_variable name="tach_warning06" comparator="NOT" value="1" />
+    <warning_popup_message message="Tachyon energy 6 gigaWatts and rising." consoles="s" player_slot="0" />
+    <set_object_property property="rollDelta" value="3" name="T1A" />
+    <set_object_property property="rollDelta" value="-3" name="T1B" />
+    <set_object_property property="rollDelta" value="3" name="T2A" />
+    <set_object_property property="rollDelta" value="-3" name="T2B" />
+    <set_object_property property="rollDelta" value="3" name="T3A" />
+    <set_object_property property="rollDelta" value="-3" name="T3B" />
+    <set_ship_text name="Tachyon Source 1" desc="Tachyon energy 6 gigaWatts and rising." />
+    <set_ship_text name="Tachyon Source 2" desc="Tachyon energy 6 gigaWatts and rising." />
+    <set_ship_text name="Tachyon Source 3" desc="Tachyon energy 6 gigaWatts and rising." />
+    <set_variable name="tach_warning06" value="1" integer="yes" />
+  </event>
+  <event name="Tachyon Update 7" id_arme="851b4fce-555e-44bf-a50a-a8041880b5fc">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_fleet_count comparator="GREATER" value="0" fleetnumber="99" sideValue="1" />
+    <if_timer_finished name="tachyon_warning_timer07" />
+    <if_variable name="tach_warning07" comparator="NOT" value="1.0" />
+    <warning_popup_message message="Tachyon energy 7 gigaWatts and rising." consoles="s" player_slot="0" />
+    <set_object_property property="rollDelta" value="3.5" name="T1A" />
+    <set_object_property property="rollDelta" value="-3.5" name="T1B" />
+    <set_object_property property="rollDelta" value="3.5" name="T2A" />
+    <set_object_property property="rollDelta" value="-3.5" name="T2B" />
+    <set_object_property property="rollDelta" value="3.5" name="T3A" />
+    <set_object_property property="rollDelta" value="-3.5" name="T3B" />
+    <set_ship_text name="Tachyon Source 1" desc="Tachyon energy 7 gigaWatts and rising." />
+    <set_ship_text name="Tachyon Source 2" desc="Tachyon energy 7 gigaWatts and rising." />
+    <set_ship_text name="Tachyon Source 3" desc="Tachyon energy 7 gigaWatts and rising." />
+    <set_variable name="tach_warning07" value="1" integer="yes" />
+  </event>
+  <event name="Tachyon Update 8" id_arme="5cb59581-f75d-4380-88e6-38bb7a740246">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_fleet_count comparator="GREATER" value="0" fleetnumber="99" sideValue="1" />
+    <if_timer_finished name="tachyon_warning_timer08" />
+    <if_variable name="tach_warning08" comparator="NOT" value="1" />
+    <warning_popup_message message="Tachyon energy 8 gigaWatts and rising." consoles="s" player_slot="0" />
+    <set_object_property property="rollDelta" value="4" name="T1A" />
+    <set_object_property property="rollDelta" value="-4" name="T1B" />
+    <set_object_property property="rollDelta" value="4" name="T2A" />
+    <set_object_property property="rollDelta" value="-4" name="T2B" />
+    <set_object_property property="rollDelta" value="4" name="T3A" />
+    <set_object_property property="rollDelta" value="-4" name="T3B" />
+    <set_ship_text name="Tachyon Source 1" desc="Tachyon energy 8 gigaWatts and rising." />
+    <set_ship_text name="Tachyon Source 2" desc="Tachyon energy 8 gigaWatts and rising." />
+    <set_ship_text name="Tachyon Source 3" desc="Tachyon energy 8 gigaWatts and rising." />
+    <set_variable name="tach_warning08" value="1" integer="yes" />
+  </event>
+  <event name="Tachyon Update 9" id_arme="5b883286-d7e3-471c-a28b-ea2766548997">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_fleet_count comparator="GREATER" value="0" fleetnumber="99" sideValue="1" />
+    <if_timer_finished name="tachyon_warning_timer09" />
+    <if_variable name="tach_warning09" comparator="NOT" value="1" />
+    <warning_popup_message message="Tachyon energy 9 gigaWatts and rising." consoles="s" player_slot="0" />
+    <set_object_property property="rollDelta" value="4.5" name="T1A" />
+    <set_object_property property="rollDelta" value="-4.5" name="T1B" />
+    <set_object_property property="rollDelta" value="4.5" name="T2A" />
+    <set_object_property property="rollDelta" value="-4.5" name="T2B" />
+    <set_object_property property="rollDelta" value="4.5" name="T3A" />
+    <set_object_property property="rollDelta" value="-4.5" name="T3B" />
+    <set_ship_text name="Tachyon Source 1" desc="Tachyon energy 9 gigaWatts and rising." />
+    <set_ship_text name="Tachyon Source 2" desc="Tachyon energy 9 gigaWatts and rising." />
+    <set_ship_text name="Tachyon Source 3" desc="Tachyon energy 9 gigaWatts and rising." />
+    <set_variable name="tach_warning09" value="1" integer="yes" />
+  </event>
+  <event name="Tachyon Update 10" id_arme="acd03fa4-f5e5-4b1d-be69-2e43d7a89a0c">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_fleet_count comparator="GREATER" value="0" fleetnumber="99" sideValue="1" />
+    <if_timer_finished name="tachyon_warning_timer10" />
+    <if_variable name="tach_warning10" comparator="NOT" value="1" />
+    <warning_popup_message message="Tachyon energy 10 gigaWatts and rising." consoles="s" player_slot="0" />
+    <set_object_property property="rollDelta" value="5" name="T1A" />
+    <set_object_property property="rollDelta" value="-5" name="T1B" />
+    <set_object_property property="rollDelta" value="5" name="T2A" />
+    <set_object_property property="rollDelta" value="-5" name="T2B" />
+    <set_object_property property="rollDelta" value="5" name="T3A" />
+    <set_object_property property="rollDelta" value="-5" name="T3B" />
+    <set_ship_text name="Tachyon Source 1" desc="Tachyon energy 10 gigaWatts and rising." />
+    <set_ship_text name="Tachyon Source 2" desc="Tachyon energy 10 gigaWatts and rising." />
+    <set_ship_text name="Tachyon Source 3" desc="Tachyon energy 10 gigaWatts and rising." />
+    <set_variable name="tach_warning10" value="1" integer="yes" />
+  </event>
+  <event name="Tachyon Update 11" id_arme="b7063a6c-dd02-4c44-85e0-e8590dab1f5b">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_fleet_count comparator="GREATER" value="0" fleetnumber="99" sideValue="1" />
+    <if_timer_finished name="tachyon_warning_timer11" />
+    <if_variable name="tach_warning11" comparator="NOT" value="1" />
+    <warning_popup_message message="Tachyon energy 11 gigaWatts and rising." consoles="s" player_slot="0" />
+    <set_object_property property="rollDelta" value="5.5" name="T1A" />
+    <set_object_property property="rollDelta" value="-5.5" name="T1B" />
+    <set_object_property property="rollDelta" value="5.5" name="T2A" />
+    <set_object_property property="rollDelta" value="-5.5" name="T2B" />
+    <set_object_property property="rollDelta" value="5.5" name="T3A" />
+    <set_object_property property="rollDelta" value="-5.5" name="T3B" />
+    <set_ship_text name="Tachyon Source 1" desc="Tachyon energy 11 gigaWatts and rising." />
+    <set_ship_text name="Tachyon Source 2" desc="Tachyon energy 11 gigaWatts and rising." />
+    <set_ship_text name="Tachyon Source 3" desc="Tachyon energy 11 gigaWatts and rising." />
+    <set_timer name="teleport_effects_timer" seconds="48" />
+    <set_variable name="SPFX" value="0" integer="yes" />
+    <set_variable name="tach_warning11" value="1" integer="yes" />
+  </event>
+  <event name="Tachyon Update 12" id_arme="51b35a67-1763-4f81-9da8-7d95d4d0b00c">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_fleet_count comparator="GREATER" value="0" fleetnumber="99" sideValue="1" />
+    <if_timer_finished name="tachyon_warning_timer12" />
+    <if_variable name="tach_warning12" comparator="NOT" value="1" />
+    <warning_popup_message message="Tachyon energy peaking at 12 gigaWatts." consoles="s" player_slot="0" />
+    <set_object_property property="rollDelta" value="6" name="T1A" />
+    <set_object_property property="rollDelta" value="-6" name="T1B" />
+    <set_object_property property="rollDelta" value="6" name="T2A" />
+    <set_object_property property="rollDelta" value="-6" name="T2B" />
+    <set_object_property property="rollDelta" value="6" name="T3A" />
+    <set_object_property property="rollDelta" value="-6" name="T3B" />
+    <set_ship_text name="Tachyon Source 1" desc="Tachyon energy 12 gigaWatts." />
+    <set_ship_text name="Tachyon Source 2" desc="Tachyon energy 12 gigaWatts." />
+    <set_ship_text name="Tachyon Source 3" desc="Tachyon energy 12 gigaWatts." />
+    <set_variable name="tach_warning12" value="1" integer="yes" />
+  </event>
+  <event name="Tachyon Update 12B" id_arme="4ad029a6-4203-48fa-87c2-0f0cbea8237b">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_fleet_count comparator="GREATER" value="0" fleetnumber="99" sideValue="1" />
+    <if_timer_finished name="tachyon_warning_timer12b" />
+    <if_variable name="tach_warning12b" comparator="NOT" value="1" />
+    <warning_popup_message message="Tachyon energy has fallen to ZERO." consoles="s" player_slot="0" />
+    <set_object_property property="rollDelta" value="0" name="T1A" />
+    <set_object_property property="rollDelta" value="0" name="T1B" />
+    <set_object_property property="rollDelta" value="0" name="T2A" />
+    <set_object_property property="rollDelta" value="0" name="T2B" />
+    <set_object_property property="rollDelta" value="0" name="T3A" />
+    <set_object_property property="rollDelta" value="0" name="T3B" />
+    <set_ship_text name="Tachyon Source 1" desc="Tachyon energy 0 gigaWatts." />
+    <set_ship_text name="Tachyon Source 2" desc="Tachyon energy 0 gigaWatts." />
+    <set_ship_text name="Tachyon Source 3" desc="Tachyon energy 0 gigaWatts." />
+    <set_variable name="tach_warning12b" value="1" integer="yes" />
+  </event>
+  <event name="Advisory Warning 1" id_arme="b45f0211-8e25-49cb-984c-a93ef403a3c0">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="automated" comparator="EQUALS" value="0.0" />
+    <if_variable name="tach_warning07" comparator="EQUALS" value="1.0" />
+    <set_comms_button text="Advisory Warning" sideValue="2" />
+    <set_variable name="automated" value="1.0" integer="yes" />
+  </event>
+  <event name="Advisory Warning 2" id_arme="3871e6a3-9264-4df8-98e2-43be4f6f1c4a">
+    <if_variable name="automated" comparator="EQUALS" value="1.0" />
+    <if_comms_button text="Advisory Warning" />
+    <clear_comms_button text="Advisory Warning" sideValue="2" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\Base_automated.wav" />
+    <set_timer name="text_timer" seconds="10" />
+    <set_variable name="automated" value="2.0" integer="yes" />
+  </event>
+  <event name="Advisory Warning 3" id_arme="111052b0-6927-4e6c-8829-428f4f9f89b2">
+    <if_variable name="automated" comparator="EQUALS" value="2.0" />
+    <if_timer_finished name="text_timer" />
+    <incoming_comms_text from="Base Operations Manager" sideValue="2" type="STATION FRIEND">This is Hamak Base calling all GW Unlimited merchant ships. The Hamak Sector is under attack. All cargo ships proceed to alternate rendezvous points. This is an automated message. Have a nice day.</incoming_comms_text>
+    <set_variable name="automated" value="3.0" integer="yes" />
+  </event>
+  <event name="Torgoth Message 1" id_arme="14de5fe9-f11f-48f6-aff9-4a7320096bfb">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="tach_warning10" comparator="EQUALS" value="1.0" />
+    <if_variable name="torgoth_message" comparator="EQUALS" value="0.0" />
+    <warning_popup_message message="Coded Torgoth message intercepted. Decoding in process." consoles="c" player_slot="0" />
+    <set_variable name="torgoth_message" value="1.0" integer="yes" />
+  </event>
+  <event name="Torgoth Message 2" id_arme="bcd28008-e899-4f40-a386-b88f108a6ba1">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="tach_warning11" comparator="EQUALS" value="1.0" />
+    <if_variable name="torgoth_message" comparator="EQUALS" value="1.0" />
+    <set_comms_button text="Torgoth Message Decoded" sideValue="2" />
+    <warning_popup_message message="Decoding process complete." consoles="C" player_slot="0" />
+    <set_variable name="torgoth_message" value="2.0" integer="yes" />
+  </event>
+  <event name="Torgoth Message 3" id_arme="fe2eb99a-eda6-4a51-a3de-be5aa44528f3">
+    <if_variable name="torgoth_message" comparator="EQUALS" value="2.0" />
+    <if_comms_button text="Torgoth Message Decoded" />
+    <clear_comms_button text="Torgoth Message Decoded" sideValue="2" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\Torgoth_decoded.wav" />
+    <set_timer name="text_timer" seconds="3" />
+    <set_variable name="torgoth_message" value="3.0" integer="yes" />
+  </event>
+  <event name="Torgoth Message 4" id_arme="8484cf5f-7230-40f7-ab23-d07ce3a47e5f">
+    <if_variable name="torgoth_message" comparator="EQUALS" value="3.0" />
+    <if_timer_finished name="text_timer" />
+    <incoming_comms_text from="Torgoth Message (Decoded)" sideValue="2" type="ENEMY">Standing by to teleport new battle squadron.</incoming_comms_text>
+    <set_variable name="torgoth_message" value="4.0" integer="yes" />
+  </event>
+  <event name="Torgoth Message 5" id_arme="42cac12e-e8f7-41bc-bb7b-b88fd38e33bf">
+    <if_variable name="torgoth_message" comparator="EQUALS" value="4.0" />
+    <if_variable name="tach_warning11" comparator="EQUALS" value="1.0" />
+    <set_variable name="torgoth_message" value="5.0" integer="yes" />
+  </event>
+  <event name="Torgoth Message 6" id_arme="f8b3de05-8f8e-4561-8e6f-650c666e11eb">
+    <if_variable name="torgoth_message" comparator="EQUALS" value="5.0" />
+    <if_variable name="tach_warning10" comparator="EQUALS" value="1.0" />
+    <if_variable name="tach_warning11" comparator="EQUALS" value="0.0" />
+    <clear_comms_button text="Torgoth Message Decoded" sideValue="2" />
+    <set_comms_button text="Torgoth Message Decoded" sideValue="2" />
+    <warning_popup_message message="Coded Torgoth message intercepted. Repeat of previous message." consoles="c" player_slot="0" />
+    <set_variable name="torgoth_message" value="2.0" integer="yes" />
+  </event>
+  <!-- Play teleport sound effect -->
+  <event name="Play SPFX" id_arme="5ad268da-4736-4c7c-8679-639ef1fc168e">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="SPFX" comparator="NOT" value="1" />
+    <if_timer_finished name="teleport_effects_timer" />
+    <if_fleet_count comparator="GREATER" value="0" fleetnumber="99" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\teleport.wav" />
+    <set_variable name="SPFX" value="1" integer="yes" />
+  </event>
+  <!-- THE KEY TO THIS MISSION SCRIPT -->
+  <!-- The code below allows this mission to create limitless hordes of Torgoths -->
+  <!-- If Teleport Ships Exist Receive Teleported Fleets Second Time -->
+  <!-- First teleport ship -->
+  <event name="Teleport Fleet 4" id_arme="ab589162-06dc-4458-9c59-bb9a61e86e3c">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="tach_warning12" comparator="EQUALS" value="1" />
+    <if_variable name="deployment_cycle" comparator="EQUALS" value="0" />
+    <if_variable name="deployment1a" comparator="EQUALS" value="0" />
+    <if_exists name="Tachyon Source 1" />
+    <create type="enemy" x="98000" y="+500" z="58800" angle="90" name="BB17" hullID="4001" sideValue="1" fleetnumber="4" />
+    <create type="enemy" x="98000" y="-500" z="58800" angle="90" name="BB18" hullID="4001" sideValue="1" fleetnumber="4" />
+    <create type="enemy" x="98800" y="0" z="59400" angle="90" name="CA19" hullID="4000" sideValue="1" fleetnumber="4" />
+    <create type="enemy" x="98800" y="0" z="58600" angle="90" name="CA20" hullID="4000" sideValue="1" fleetnumber="4" />
+    <set_variable name="deployment1a" value="1" integer="yes" />
+  </event>
+  <!-- Second teleport ship -->
+  <event name="Teleport Fleet 5" id_arme="52336d2b-3e94-49e4-b5a1-910a83d5b7d1">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="tach_warning12" comparator="EQUALS" value="1" />
+    <if_variable name="deployment_cycle" comparator="EQUALS" value="0" />
+    <if_variable name="deployment1b" comparator="EQUALS" value="0" />
+    <if_exists name="Tachyon Source 2" />
+    <create type="enemy" x="98000" y="-500" z="18800" angle="90" name="BB22" hullID="4001" sideValue="1" fleetnumber="5" />
+    <create type="enemy" x="98000" y="500" z="18800" angle="90" name="BB23" hullID="4001" sideValue="1" fleetnumber="5" />
+    <create type="enemy" x="98800" y="0" z="19400" angle="90" name="CA24" hullID="4000" sideValue="1" fleetnumber="5" />
+    <create type="enemy" x="98800" y="0" z="18600" angle="90" name="CA25" hullID="4000" sideValue="1" fleetnumber="5" />
+    <set_variable name="deployment1b" value="1" integer="yes" />
+  </event>
+  <!-- Third teleport ship -->
+  <event name="Teleport Fleet 6" id_arme="24c311ca-ab12-4282-8638-a1e266262d13">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="tach_warning12" comparator="EQUALS" value="1" />
+    <if_variable name="deployment_cycle" comparator="EQUALS" value="0" />
+    <if_variable name="deployment1c" comparator="EQUALS" value="0" />
+    <if_exists name="Tachyon Source 3" />
+    <create type="enemy" x="58800" y="500" z="2800" angle="180" name="DN27" hullID="4002" sideValue="1" fleetnumber="6" />
+    <create type="enemy" x="58800" y="-500" z="2800" angle="180" name="BB28" hullID="4001" sideValue="1" fleetnumber="6" />
+    <create type="enemy" x="59400" y="0" z="2900" angle="180" name="CA29" hullID="4000" sideValue="1" fleetnumber="6" />
+    <create type="enemy" x="58600" y="0" z="2900" angle="180" name="CA30" hullID="4000" sideValue="1" fleetnumber="6" />
+    <set_variable name="deployment1c" value="1" integer="yes" />
+    <log text="Second teleport\n\n" />
+  </event>
+  <!-- If Teleport Ships Exist Receive Teleported Fleets Third Time -->
+  <!-- First teleport ship -->
+  <event name="Teleport Fleet 7" id_arme="2611b0aa-e493-4b42-bf10-d02a9d42266e">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="tach_warning12" comparator="EQUALS" value="1" />
+    <if_variable name="deployment_cycle" comparator="EQUALS" value="1" />
+    <if_variable name="deployment2a" comparator="EQUALS" value="0" />
+    <if_exists name="Tachyon Source 1" />
+    <create type="enemy" x="98000" y="0" z="58800" angle="90" name="BB33" hullID="4001" sideValue="1" fleetnumber="7" />
+    <create type="enemy" x="98800" y="0" z="59400" angle="90" name="CA34" hullID="4000" sideValue="1" fleetnumber="7" />
+    <create type="enemy" x="98800" y="0" z="58600" angle="90" name="CA35" hullID="4000" sideValue="1" fleetnumber="7" />
+    <set_variable name="deployment2a" value="1" integer="yes" />
+    <log text="Third teleport\n\n" />
+  </event>
+  <!-- Second teleport ship -->
+  <event name="Teleport Fleet 8" id_arme="bd4ba648-f356-489e-8b82-40eac07d350f">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="tach_warning12" comparator="EQUALS" value="1" />
+    <if_variable name="deployment_cycle" comparator="EQUALS" value="1" />
+    <if_variable name="deployment2b" comparator="EQUALS" value="0" />
+    <if_exists name="Tachyon Source 2" />
+    <create type="enemy" x="98000" y="500" z="18800" angle="90" name="BB37" hullID="4001" sideValue="1" fleetnumber="8" />
+    <create type="enemy" x="98000" y="-500" z="18800" angle="90" name="BB38" hullID="4001" sideValue="1" fleetnumber="8" />
+    <create type="enemy" x="98800" y="0" z="19400" angle="90" name="CA39" hullID="4000" sideValue="1" fleetnumber="8" />
+    <create type="enemy" x="98800" y="0" z="18600" angle="90" name="CA40" hullID="4000" sideValue="1" fleetnumber="8" />
+    <set_variable name="deployment2b" value="1" integer="yes" />
+  </event>
+  <!-- Third teleport ship -->
+  <event name="Teleport Fleet 9" id_arme="edd7ca20-c0c1-45ed-b930-30f594f50ba4">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="tach_warning12" comparator="EQUALS" value="1" />
+    <if_variable name="deployment_cycle" comparator="EQUALS" value="1" />
+    <if_variable name="deployment2c" comparator="EQUALS" value="0" />
+    <if_exists name="Tachyon Source 3" />
+    <create type="enemy" x="58800" y="500" z="2800" angle="180" name="BB42" hullID="4001" sideValue="1" fleetnumber="9" />
+    <create type="enemy" x="58800" y="-500" z="2800" angle="180" name="BB43" hullID="4001" sideValue="1" fleetnumber="9" />
+    <create type="enemy" x="59400" y="0" z="2900" angle="180" name="CA44" hullID="4000" sideValue="1" fleetnumber="9" />
+    <create type="enemy" x="58600" y="0" z="2900" angle="180" name="CA45" hullID="4000" sideValue="1" fleetnumber="9" />
+    <set_variable name="deployment2c" value="1" integer="yes" />
+  </event>
+  <!-- If Teleport Ships Exist Receive Teleported Fleets Fourth Time -->
+  <!-- First teleport ship -->
+  <event name="Teleport Fleet 10" id_arme="1c624ac7-b136-45e6-a115-6351aca167e0">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="tach_warning12" comparator="EQUALS" value="1" />
+    <if_variable name="deployment_cycle" comparator="EQUALS" value="2" />
+    <if_variable name="deployment3a" comparator="EQUALS" value="0" />
+    <if_exists name="Tachyon Source 1" />
+    <create type="enemy" x="98000" y="0" z="58800" angle="90" name="BB48" hullID="4001" sideValue="1" fleetnumber="10" />
+    <create type="enemy" x="98800" y="0" z="59400" angle="90" name="CA49" hullID="4000" sideValue="1" fleetnumber="10" />
+    <create type="enemy" x="98800" y="0" z="58600" angle="90" name="CA50" hullID="4000" sideValue="1" fleetnumber="10" />
+    <set_variable name="deployment3a" value="1" integer="yes" />
+    <log text="Fourth teleport\n\n" />
+  </event>
+  <!-- Second teleport ship -->
+  <event name="Teleport Fleet 11" id_arme="f55fcc43-9e95-4429-8a55-efb7a580ecc2">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="tach_warning12" comparator="EQUALS" value="1" />
+    <if_variable name="deployment_cycle" comparator="EQUALS" value="2" />
+    <if_variable name="deployment3b" comparator="EQUALS" value="0" />
+    <if_exists name="Tachyon Source 2" />
+    <create type="enemy" x="98000" y="0" z="18800" angle="90" name="BB53" hullID="4001" sideValue="1" fleetnumber="11" />
+    <create type="enemy" x="98800" y="0" z="19400" angle="90" name="CA54" hullID="4000" sideValue="1" fleetnumber="11" />
+    <create type="enemy" x="98800" y="0" z="18600" angle="90" name="CA55" hullID="4000" sideValue="1" fleetnumber="11" />
+    <set_variable name="deployment3b" value="1" integer="yes" />
+  </event>
+  <!-- Third teleport ship -->
+  <event name="Teleport Fleet 12" id_arme="a262bb21-585e-43bb-bc36-05c553bb3a54">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="tach_warning12" comparator="EQUALS" value="1" />
+    <if_variable name="deployment_cycle" comparator="EQUALS" value="2" />
+    <if_variable name="deployment3c" comparator="EQUALS" value="0" />
+    <if_exists name="Tachyon Source 3" />
+    <create type="enemy" x="58800" y="0" z="2800" angle="180" name="BB58" hullID="4001" sideValue="1" fleetnumber="12" />
+    <create type="enemy" x="59400" y="0" z="2900" angle="180" name="CA59" hullID="4000" sideValue="1" fleetnumber="12" />
+    <create type="enemy" x="58600" y="0" z="2900" angle="180" name="CA60" hullID="4000" sideValue="1" fleetnumber="12" />
+    <set_variable name="deployment3c" value="1" integer="yes" />
+  </event>
+  <!-- If Teleport Ships Exist Receive Teleported Fleets Fifth Time -->
+  <!-- First teleport ship -->
+  <event name="Teleport Fleet 13" id_arme="2c834e53-18b5-40fb-8c6a-32754006d5ae">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="tach_warning12" comparator="EQUALS" value="1" />
+    <if_variable name="deployment_cycle" comparator="EQUALS" value="3" />
+    <if_variable name="deployment4a" comparator="EQUALS" value="0" />
+    <if_exists name="Tachyon Source 1" />
+    <create type="enemy" x="98000" y="0" z="58800" angle="90" name="BB63" hullID="4001" sideValue="1" fleetnumber="13" />
+    <create type="enemy" x="98800" y="0" z="59400" angle="90" name="CA64" hullID="4000" sideValue="1" fleetnumber="13" />
+    <create type="enemy" x="98800" y="0" z="58600" angle="90" name="CA65" hullID="4000" sideValue="1" fleetnumber="13" />
+    <set_variable name="deployment4a" value="1" integer="yes" />
+    <log text="Fifth teleport\n\n" />
+  </event>
+  <!-- Second teleport ship -->
+  <event name="Teleport Fleet 14" id_arme="6e0c3b79-d891-4c6d-adb3-601f4a3238a9">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="tach_warning12" comparator="EQUALS" value="1" />
+    <if_variable name="deployment_cycle" comparator="EQUALS" value="3" />
+    <if_variable name="deployment4b" comparator="EQUALS" value="0" />
+    <if_exists name="Tachyon Source 2" />
+    <create type="enemy" x="98000" y="0" z="18800" angle="90" name="BB68" hullID="4001" sideValue="1" fleetnumber="14" />
+    <create type="enemy" x="98800" y="0" z="19400" angle="90" name="CA69" hullID="4000" sideValue="1" fleetnumber="14" />
+    <create type="enemy" x="98800" y="0" z="18600" angle="90" name="CA70" hullID="4000" sideValue="1" fleetnumber="14" />
+    <set_variable name="deployment4b" value="1" integer="yes" />
+  </event>
+  <!-- Third teleport ship -->
+  <event name="Teleport Fleet 15" id_arme="a0a54e7b-e022-4fea-97dc-55ab3cff2b62">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="tach_warning12" comparator="EQUALS" value="1" />
+    <if_variable name="deployment_cycle" comparator="EQUALS" value="3" />
+    <if_variable name="deployment4c" comparator="EQUALS" value="0" />
+    <if_exists name="Tachyon Source 3" />
+    <create type="enemy" x="58800" y="0" z="2800" angle="180" name="BB73" hullID="4001" sideValue="1" fleetnumber="15" />
+    <create type="enemy" x="59400" y="0" z="2900" angle="180" name="CA74" hullID="4000" sideValue="1" fleetnumber="15" />
+    <create type="enemy" x="58600" y="0" z="2900" angle="180" name="CA75" hullID="4000" sideValue="1" fleetnumber="15" />
+    <set_variable name="deployment4c" value="1" integer="yes" />
+  </event>
+  <!-- After Teleport Recycle the timers -->
+  <event name="Recycle Tachyon Timers" id_arme="059785cc-c7ae-4aaa-bf60-3a2c165e22df">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="tach_warning12b" comparator="EQUALS" value="1" />
+    <set_timer name="tachyon_warning_timer01" seconds="40" />
+    <set_timer name="tachyon_warning_timer02" seconds="80" />
+    <set_timer name="tachyon_warning_timer03" seconds="120" />
+    <set_timer name="tachyon_warning_timer04" seconds="160" />
+    <set_timer name="tachyon_warning_timer05" seconds="200" />
+    <set_timer name="tachyon_warning_timer06" seconds="240" />
+    <set_timer name="tachyon_warning_timer07" seconds="280" />
+    <set_timer name="tachyon_warning_timer08" seconds="320" />
+    <set_timer name="tachyon_warning_timer09" seconds="360" />
+    <set_timer name="tachyon_warning_timer10" seconds="400" />
+    <set_timer name="tachyon_warning_timer11" seconds="450" />
+    <set_timer name="tachyon_warning_timer12" seconds="500" />
+    <set_timer name="tachyon_warning_timer12b" seconds="550" />
+    <set_variable name="tach_warning01" value="0" integer="yes" />
+    <set_variable name="tach_warning02" value="0" integer="yes" />
+    <set_variable name="tach_warning03" value="0" integer="yes" />
+    <set_variable name="tach_warning04" value="0" integer="yes" />
+    <set_variable name="tach_warning05" value="0" integer="yes" />
+    <set_variable name="tach_warning06" value="0" integer="yes" />
+    <set_variable name="tach_warning07" value="0" integer="yes" />
+    <set_variable name="tach_warning08" value="0" integer="yes" />
+    <set_variable name="tach_warning09" value="0" integer="yes" />
+    <set_variable name="tach_warning10" value="0" integer="yes" />
+    <set_variable name="tach_warning11" value="0" integer="yes" />
+    <set_variable name="tach_warning12" value="0" integer="yes" />
+    <set_variable name="tach_warning12b" value="0" integer="yes" />
+    <set_variable name="cycling" value="1" integer="yes" />
+  </event>
+  <!-- Cycle through the possible deployments -->
+  <event name="Cycle Deployment 1" id_arme="f71615ef-9740-44b8-be96-58a9e1d38cc2">
+    <if_variable name="cycling" comparator="EQUALS" value="1" />
+    <if_variable name="deployment_cycle" comparator="EQUALS" value="0" />
+    <set_variable name="deployment_cycle" value="1" integer="yes" />
+    <set_variable name="cycling" value="0" integer="yes" />
+  </event>
+  <event name="Cycle Deployment 2" id_arme="ac874a04-021d-4437-baf2-c86c5542572f">
+    <if_variable name="cycling" comparator="EQUALS" value="1" />
+    <if_variable name="deployment_cycle" comparator="EQUALS" value="1" />
+    <set_variable name="deployment_cycle" value="2" integer="yes" />
+    <set_variable name="cycling" value="0" integer="yes" />
+  </event>
+  <event name="Cycle Deployment 3" id_arme="bc1d4868-b295-4161-9da8-92e8e51ed71b">
+    <if_variable name="cycling" comparator="EQUALS" value="1" />
+    <if_variable name="deployment_cycle" comparator="EQUALS" value="2" />
+    <set_variable name="deployment_cycle" value="3" integer="yes" />
+    <set_variable name="cycling" value="0" integer="yes" />
+  </event>
+  <!-- After Cycling through start over -->
+  <event name="Reset All Deployment Variables" id_arme="1a14af51-87e1-4996-94d8-6ff3f3d37282">
+    <if_variable name="cycling" comparator="EQUALS" value="1" />
+    <if_variable name="deployment_cycle" comparator="EQUALS" value="3" />
+    <set_variable name="deployment_cycle" value="0" integer="yes" />
+    <set_variable name="deployment1a" value="0" integer="yes" />
+    <set_variable name="deployment1b" value="0" integer="yes" />
+    <set_variable name="deployment1c" value="0" integer="yes" />
+    <set_variable name="deployment2a" value="0" integer="yes" />
+    <set_variable name="deployment2b" value="0" integer="yes" />
+    <set_variable name="deployment2c" value="0" integer="yes" />
+    <set_variable name="deployment3a" value="0" integer="yes" />
+    <set_variable name="deployment3b" value="0" integer="yes" />
+    <set_variable name="deployment3c" value="0" integer="yes" />
+    <set_variable name="deployment4a" value="0" integer="yes" />
+    <set_variable name="deployment4b" value="0" integer="yes" />
+    <set_variable name="deployment4c" value="0" integer="yes" />
+    <set_variable name="cycling" value="0" integer="yes" />
+    <log text="Start teleport cycle again\n\n" />
+  </event>
+  <!-- If Artemis strays north too early, first give them a warning -->
+  <event name="Wise Guys Warning 1" id_arme="b10db393-49c9-4053-b92d-919a64e42f11">
+    <if_variable name="chapter" comparator="EQUALS" value="1" />
+    <if_inside_box player_slot="0" leastX="0" leastZ="0" mostX="100000" mostZ="45000" />
+    <if_variable name="weeks_unauthorized" comparator="EQUALS" value="0.0" />
+    <clear_comms_button text="Reminder from Adm. Weeks" sideValue="2" />
+    <set_comms_button text="Reminder from Adm. Weeks" sideValue="2" />
+    <set_variable name="weeks_unauthorized" value="1" integer="yes" />
+  </event>
+  <event name="Wise Guys Warning 2" id_arme="da579a80-f5ff-4297-8f37-2b8892c4456f">
+    <if_comms_button text="Reminder from Adm. Weeks" />
+    <if_variable name="weeks_unauthorized" comparator="EQUALS" value="1.0" />
+    <clear_comms_button text="Reminder from Adm. Weeks" sideValue="2" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\Weeks_warning.wav" />
+    <set_timer name="text_timer" seconds="18" />
+    <set_variable name="weeks_unauthorized" value="2.0" integer="yes" />
+  </event>
+  <event name="Wise Guys Warning 3" id_arme="f2f2f2a4-ea80-4dc7-9ce2-9f302e883a98">
+    <if_timer_finished name="text_timer" />
+    <if_variable name="weeks_unauthorized" comparator="EQUALS" value="2.0" />
+    <incoming_comms_text from="Admiral Weeks" sideValue="2" type="FRIEND">Attention, Artemis! This is 2-star Admiral Giles Weeks, Supreme Commander of the Hamak Sector. Your mission is to investigate unknown tachyon source #1, located in grid C1 of the nebula. You are to leave unknown tachyon source #3 for the Warsaw. Please turn hard to port and complete your mission.</incoming_comms_text>
+    <set_variable name="weeks_unauthorized" value="3.0" integer="yes" />
+  </event>
+  <!-- If Artemis strays north too early and ignores the warning, hit them with a massive Torgoth squadron -->
+  <event name="Wise Guys 1" id_arme="f242b3af-31d0-4265-9d2f-417ddb08a936">
+    <if_variable name="chapter" comparator="LESS" value="3" />
+    <if_inside_box player_slot="0" leastX="0" leastZ="0" mostX="100000" mostZ="40000" />
+    <if_variable name="wise_guys" comparator="EQUALS" value="0" />
+    <create type="enemy" x="50000" y="0" z="55600" angle="180" name="DN101" hullID="4002" sideValue="1" fleetnumber="20" />
+    <create type="enemy" x="50200" y="0" z="55800" angle="180" name="DN102" hullID="4002" sideValue="1" fleetnumber="20" />
+    <create type="enemy" x="49800" y="0" z="55800" angle="180" name="DN103" hullID="4002" sideValue="1" fleetnumber="20" />
+    <create type="enemy" x="49800" y="0" z="55400" angle="180" name="DN104" hullID="4002" sideValue="1" fleetnumber="20" />
+    <create type="enemy" x="50200" y="0" z="55400" angle="180" name="DN105" hullID="4002" sideValue="1" fleetnumber="20" />
+    <create type="enemy" x="50400" y="0" z="55000" angle="180" name="DN106" hullID="4002" sideValue="1" fleetnumber="20" />
+    <create type="enemy" x="49600" y="1000" z="55000" angle="180" name="DN107" hullID="4001" sideValue="1" fleetnumber="20" />
+    <create type="enemy" x="50400" y="-1000" z="55200" angle="180" name="DN108" hullID="4001" sideValue="1" fleetnumber="20" />
+    <create type="enemy" x="49600" y="-1000" z="55200" angle="180" name="DN109" hullID="4001" sideValue="1" fleetnumber="20" />
+    <set_fleet_property property="fleetSpacing" value="800" fleetIndex="20" />
+    <set_fleet_property property="fleetMaxRadius" value="2500" fleetIndex="20" />
+    <warning_popup_message message="Tachyon energy surging to 12 gigaWatts!" consoles="s" player_slot="0" />
+    <set_variable name="wise_guys" value="1" integer="yes" />
+  </event>
+  <event name="Wise Guys 2" id_arme="d63bedef-f5a7-4c03-8e39-3508db748734">
+    <if_variable name="chapter" comparator="LESS" value="3" />
+    <if_variable name="wise_guys" comparator="EQUALS" value="1" />
+    <set_object_property property="topSpeed" value="3.5" name="DN101" />
+    <set_object_property property="topSpeed" value="3.5" name="DN102" />
+    <set_object_property property="topSpeed" value="3.5" name="DN103" />
+    <set_object_property property="topSpeed" value="3.5" name="DN104" />
+    <set_object_property property="topSpeed" value="3.5" name="DN105" />
+    <set_object_property property="topSpeed" value="3.5" name="DN106" />
+    <set_object_property property="topSpeed" value="3.5" name="DN107" />
+    <set_object_property property="topSpeed" value="3.5" name="DN108" />
+    <set_object_property property="topSpeed" value="3.5" name="DN109" />
+    <set_object_property property="turnRate" value="1/50" name="DN101" />
+    <set_object_property property="turnRate" value="1/50" name="DN102" />
+    <set_object_property property="turnRate" value="1/50" name="DN103" />
+    <set_object_property property="turnRate" value="1/50" name="DN104" />
+    <set_object_property property="turnRate" value="1/50" name="DN105" />
+    <set_object_property property="turnRate" value="1/50" name="DN106" />
+    <set_object_property property="turnRate" value="1/50" name="DN107" />
+    <set_object_property property="turnRate" value="1/50" name="DN108" />
+    <set_relative_position name2="DN101" distance="1800" angle="0" player_slot1="0" />
+    <set_relative_position name2="DN102" distance="1900" angle="10" player_slot1="0" />
+    <set_relative_position name2="DN103" distance="1900" angle="350" player_slot1="0" />
+    <set_relative_position name2="DN104" distance="1900" angle="20" player_slot1="0" />
+    <set_relative_position name2="DN105" distance="1900" angle="340" player_slot1="0" />
+    <set_relative_position name2="DN106" distance="2000" angle="30" player_slot1="0" />
+    <set_relative_position name2="DN107" distance="2000" angle="330" player_slot1="0" />
+    <set_relative_position name2="DN108" distance="2200" angle="0" player_slot1="0" />
+    <add_ai type="CHASE_PLAYER" value1="20000" value2="10000" name="DN101" />
+    <add_ai type="CHASE_PLAYER" value1="20000" value2="10000" name="DN102" />
+    <add_ai type="CHASE_PLAYER" value1="20000" value2="10000" name="DN103" />
+    <add_ai type="CHASE_PLAYER" value1="20000" value2="10000" name="DN104" />
+    <add_ai type="CHASE_PLAYER" value1="20000" value2="10000" name="DN105" />
+    <add_ai type="CHASE_PLAYER" value1="20000" value2="10000" name="DN106" />
+    <add_ai type="CHASE_PLAYER" value1="20000" value2="10000" name="DN107" />
+    <add_ai type="CHASE_PLAYER" value1="20000" value2="10000" name="DN108" />
+    <set_variable name="wise_guys" value="2" integer="yes" />
+  </event>
+  <!-- Here is how the ramscoop works -->
+  <!-- Activate Ramscoop when Engineering has checed it out -->
+  <event name="Ramscoop Checked Out" id_arme="cfe1403f-a28e-4c47-96f2-44311afd6a78">
+    <if_timer_finished name="ramscoop_install_timer" />
+    <if_variable name="ramscoop" comparator="EQUALS" value="1" />
+    <if_variable name="ramscoop_install" comparator="NOT" value="1" />
+    <warning_popup_message message="Engineering Team reports Ramscoop ready for use." consoles="E" player_slot="0" />
+    <set_variable name="ramscoop_active" value="1" integer="yes" />
+    <set_variable name="ramscoop_install" value="1" integer="yes" />
+  </event>
+  <!-- Under right conditions Ramscoop gathers some energy every 3 seconds -->
+  <!-- First see if energy gather is valid -->
+  <event name="Ramscoop Can Gather" id_arme="95a43a1a-4d8d-49ec-84f9-e8a916dcf1d9">
+    <if_variable name="ramscoop" comparator="EQUALS" value="1" />
+    <if_variable name="ramscoop_active" comparator="EQUALS" value="1" />
+    <if_inside_sphere player_slot="0" centerX="100000" centerY="0" centerZ="0" radius="85000" />
+    <if_object_property property="currentRealSpeed" player_slot="0" comparator="GREATER" value="0.099" />
+    <if_object_property property="warpState" player_slot="0" comparator="LESS" value="1" />
+    <if_object_property property="energy" player_slot="0" comparator="less" value="1200" />
+    <if_object_property property="shieldsOn" player_slot="0" comparator="EQUALS" value="0" />
+    <set_timer name="ramscoop_timer" seconds="3" />
+    <set_variable name="ramscoop_triggered" value="1" integer="yes" />
+    <set_variable name="ramscoop_gathering" value="1" integer="yes" />
+    <set_variable name="ramscoop_active" value="0" integer="yes" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\ramscoopQ.wav" />
+    <addto_object_property value="10" property="energy" player_slot="0" />
+  </event>
+  <!-- Then cascade the energy gathering. -->
+  <event name="Scooping 1" id_arme="a0021b42-800e-4750-99e4-2f153cdabee2">
+    <if_variable name="ramscoop_gathering" comparator="EQUALS" value="1" />
+    <if_object_property property="currentRealSpeed" player_slot="0" comparator="GREATER" value="0.199" />
+    <addto_object_property value="10" property="energy" player_slot="0" />
+  </event>
+  <event name="Scooping 2" id_arme="209428d5-cf27-4909-bcc8-e54fa4235f62">
+    <if_variable name="ramscoop_gathering" comparator="EQUALS" value="1" />
+    <if_object_property property="currentRealSpeed" player_slot="0" comparator="GREATER" value="0.299" />
+    <addto_object_property value="10" property="energy" player_slot="0" />
+  </event>
+  <event name="Scooping 3" id_arme="bc7805ab-2079-48ee-a592-de8f236daca0">
+    <if_variable name="ramscoop_gathering" comparator="EQUALS" value="1" />
+    <if_object_property property="currentRealSpeed" player_slot="0" comparator="GREATER" value="0.4" />
+    <addto_object_property value="10" property="energy" player_slot="0" />
+  </event>
+  <event name="Scooping 4" id_arme="ddf79b9b-2a2e-4cbe-8f5f-5f15da21b904">
+    <if_variable name="ramscoop_gathering" comparator="EQUALS" value="1" />
+    <if_object_property property="currentRealSpeed" player_slot="0" comparator="GREATER" value="0.5" />
+    <addto_object_property value="10" property="energy" player_slot="0" />
+  </event>
+  <event name="Scooping 5" id_arme="cbf5fe75-6eb3-4d31-a5ab-66fa89606718">
+    <if_variable name="ramscoop_gathering" comparator="EQUALS" value="1" />
+    <if_object_property property="currentRealSpeed" player_slot="0" comparator="GREATER" value="0.6" />
+    <addto_object_property value="10" property="energy" player_slot="0" />
+  </event>
+  <event name="Scooping 6" id_arme="c342c58f-6903-4bd6-97bf-d105619e31ef">
+    <if_variable name="ramscoop_gathering" comparator="EQUALS" value="1" />
+    <if_object_property property="currentRealSpeed" player_slot="0" comparator="GREATER" value="0.7" />
+    <addto_object_property value="10" property="energy" player_slot="0" />
+  </event>
+  <event name="Scooping 7" id_arme="5da26690-c859-47f1-b6a3-e7248c30da5b">
+    <if_variable name="ramscoop_gathering" comparator="EQUALS" value="1" />
+    <if_object_property property="currentRealSpeed" player_slot="0" comparator="GREATER" value="0.8" />
+    <addto_object_property value="10" property="energy" player_slot="0" />
+  </event>
+  <event name="Scooping 8" id_arme="97185aff-c3d3-467f-b9f1-2d54e6d01383">
+    <if_variable name="ramscoop_gathering" comparator="EQUALS" value="1" />
+    <if_object_property property="currentRealSpeed" player_slot="0" comparator="GREATER" value="0.9" />
+    <addto_object_property value="10" property="energy" player_slot="0" />
+  </event>
+  <event name="Scooping 9" id_arme="7503d495-8ebd-4287-9b08-818b6d52a92b">
+    <if_variable name="ramscoop_gathering" comparator="EQUALS" value="1" />
+    <if_object_property property="currentRealSpeed" player_slot="0" comparator="GREATER" value="1.0" />
+    <addto_object_property value="10" property="energy" player_slot="0" />
+  </event>
+  <event name="Scooping 10" id_arme="69f4651c-83b9-405a-9811-d492b2d9e1e1">
+    <if_variable name="ramscoop_gathering" comparator="EQUALS" value="1" />
+    <if_object_property property="currentRealSpeed" player_slot="0" comparator="GREATER" value="1.1" />
+    <addto_object_property value="10" property="energy" player_slot="0" />
+  </event>
+  <event name="Scooping 11" id_arme="e15efeeb-99a1-4a7e-8434-fc4f81696cd9">
+    <if_variable name="ramscoop_gathering" comparator="EQUALS" value="1" />
+    <if_object_property property="currentRealSpeed" player_slot="0" comparator="GREATER" value="1.2" />
+    <addto_object_property value="10" property="energy" player_slot="0" />
+  </event>
+  <event name="Scooping 12" id_arme="d22a42d6-dda2-4162-b919-8f51326baf28">
+    <if_variable name="ramscoop_gathering" comparator="EQUALS" value="1" />
+    <if_object_property property="currentRealSpeed" player_slot="0" comparator="GREATER" value="1.3" />
+    <addto_object_property value="10" property="energy" player_slot="0" />
+  </event>
+  <event name="Scooping 13" id_arme="e5b6502e-43a3-4b59-87ce-9bfb683eea11">
+    <if_variable name="ramscoop_gathering" comparator="EQUALS" value="1" />
+    <if_object_property property="currentRealSpeed" player_slot="0" comparator="GREATER" value="1.4" />
+    <addto_object_property value="10" property="energy" player_slot="0" />
+  </event>
+  <event name="Scooping 14" id_arme="d121d424-86b2-47c0-9e0e-2cfa3425831f">
+    <if_variable name="ramscoop_gathering" comparator="EQUALS" value="1" />
+    <if_object_property property="currentRealSpeed" player_slot="0" comparator="GREATER" value="1.5" />
+    <addto_object_property value="10" property="energy" player_slot="0" />
+  </event>
+  <event name="Scooping 15" id_arme="321f0c9a-81cd-4639-8bce-adbb939eb8f7">
+    <if_variable name="ramscoop_gathering" comparator="EQUALS" value="1" />
+    <if_object_property property="currentRealSpeed" player_slot="0" comparator="GREATER" value="1.6" />
+    <addto_object_property value="10" property="energy" player_slot="0" />
+  </event>
+  <event name="Scooping 16" id_arme="a0070d7c-cb77-4c97-91b1-8f9d73260846">
+    <if_variable name="ramscoop_gathering" comparator="EQUALS" value="1" />
+    <if_object_property property="currentRealSpeed" player_slot="0" comparator="GREATER" value="1.7" />
+    <addto_object_property value="10" property="energy" player_slot="0" />
+  </event>
+  <event name="Scooping 17" id_arme="4d09d522-6505-4e54-8df7-cef0801066d5">
+    <if_variable name="ramscoop_gathering" comparator="EQUALS" value="1" />
+    <if_object_property property="currentRealSpeed" player_slot="0" comparator="GREATER" value="1.8" />
+    <addto_object_property value="10" property="energy" player_slot="0" />
+  </event>
+  <event name="Scooping 18" id_arme="365b0419-8c8b-45ce-83f9-521b8babaf7d">
+    <if_variable name="ramscoop_gathering" comparator="EQUALS" value="1" />
+    <if_object_property property="currentRealSpeed" player_slot="0" comparator="GREATER" value="1.9" />
+    <addto_object_property value="10" property="energy" player_slot="0" />
+  </event>
+  <event name="Scooping 19" id_arme="08367b8c-ef08-4009-a4b5-314fad8ac547">
+    <if_variable name="ramscoop_gathering" comparator="EQUALS" value="1" />
+    <if_object_property property="currentRealSpeed" player_slot="0" comparator="GREATER" value="2.0" />
+    <addto_object_property value="10" property="energy" player_slot="0" />
+  </event>
+  <event name="Scooping 20" id_arme="04eea2c8-2ac8-4184-acf1-5e44d0a643f9">
+    <if_variable name="ramscoop_gathering" comparator="EQUALS" value="1" />
+    <if_object_property property="currentRealSpeed" player_slot="0" comparator="GREATER" value="2.1" />
+    <addto_object_property value="10" property="energy" player_slot="0" />
+  </event>
+  <event name="Scooping 21" id_arme="532436b3-d747-4fe9-94b3-0ad5dd160ba4">
+    <if_variable name="ramscoop_gathering" comparator="EQUALS" value="1" />
+    <if_object_property property="currentRealSpeed" player_slot="0" comparator="GREATER" value="2.2" />
+    <addto_object_property value="10" property="energy" player_slot="0" />
+  </event>
+  <event name="Scooping 22" id_arme="9de1e76d-899b-4f6d-8c68-6fe0d77c2851">
+    <if_variable name="ramscoop_gathering" comparator="EQUALS" value="1" />
+    <if_object_property property="currentRealSpeed" player_slot="0" comparator="GREATER" value="2.3" />
+    <addto_object_property value="10" property="energy" player_slot="0" />
+  </event>
+  <event name="Scooping 23" id_arme="b4d560a8-c0ac-4bac-85b3-c00f7e05b3b9">
+    <if_variable name="ramscoop_gathering" comparator="EQUALS" value="1" />
+    <if_object_property property="currentRealSpeed" player_slot="0" comparator="GREATER" value="2.4" />
+    <addto_object_property value="10" property="energy" player_slot="0" />
+  </event>
+  <event name="Scooping 24" id_arme="25102aee-b9a4-4cfa-b981-00ade75431fc">
+    <if_variable name="ramscoop_gathering" comparator="EQUALS" value="1" />
+    <set_variable name="ramscoop_gathering" value="0" integer="yes" />
+  </event>
+  <!-- Let them know if they are too far from nebula -->
+  <event name="Ramscoop Outside Nebula" id_arme="a5c1b518-bc61-4ea1-968e-afed528d4b61">
+    <if_variable name="ramscoop" comparator="EQUALS" value="1" />
+    <if_variable name="ramscoop_active" comparator="EQUALS" value="1" />
+    <if_variable name="ramscoop_warning" comparator="NOT" value="1" />
+    <if_outside_sphere player_slot="0" centerX="100000" centerY="0" centerZ="0" radius="85000" />
+    <if_object_property property="warpState" player_slot="0" comparator="EQUALS" value="0" />
+    <if_object_property property="currentRealSpeed" player_slot="0" comparator="GREATER" value="0.099" />
+    <if_object_property property="shieldsOn" player_slot="0" comparator="EQUALS" value="0" />
+    <if_object_property property="energy" player_slot="0" comparator="less" value="160" />
+    <warning_popup_message message="Ramscoop cannot operate outside nebula" consoles="E" player_slot="0" />
+    <set_timer name="ramscoop_warning_timer" seconds="5" />
+    <set_variable name="ramscoop_warning" value="1" integer="yes" />
+  </event>
+  <!-- Check to see if Ramscoop is ready to gather energy -->
+  <event name="Activate Ramscoop" id_arme="9e5ef2e8-e331-4903-aa68-a2319467f475">
+    <if_timer_finished name="ramscoop_timer" />
+    <if_variable name="ramscoop" comparator="EQUALS" value="1" />
+    <if_variable name="ramscoop_active" comparator="NOT" value="1" />
+    <set_variable name="ramscoop_active" value="1" integer="yes" />
+  </event>
+  <!-- Popup explains ramscoop sound -->
+  <event name="Ramscoop  Rumble" id_arme="34123fdc-74f3-4073-8e29-4f0373ba70f3">
+    <if_variable name="ramscoop_sound_popup" comparator="NOT" value="1" />
+    <if_variable name="ramscoop_triggered" comparator="EQUALS" value="1" />
+    <warning_popup_message message="Sound indicates Ramscoop operation." consoles="E" player_slot="0" />
+    <set_variable name="ramscoop_sound_popup" value="1" integer="yes" />
+  </event>
+  <!-- Check to see if Ramscoop warning has expired -->
+  <event name="Ramscoop Warning" id_arme="f9e3d74c-a816-4836-bce4-f63c09c2baf5">
+    <if_timer_finished name="ramscoop_warning_timer" />
+    <if_variable name="ramscoop_warning" comparator="EQUALS" value="1" />
+    <set_variable name="ramscoop_warning" value="0" integer="yes" />
+  </event>
+  <!-- First time they are far from the base take away some energy -->
+  <!-- so they need to use the ramscoop. -->
+  <event name="Energy Drops" id_arme="3265e4b9-688b-4267-bcab-3ac0f5cc82ca">
+    <if_variable name="ramscoop" comparator="EQUALS" value="1" />
+    <if_variable name="energy_drop" comparator="EQUALS" value="0.0" />
+    <if_inside_sphere player_slot="0" centerX="100000" centerY="0" centerZ="0" radius="75500" />
+    <addto_object_property value="-650" property="energy" player_slot="0" />
+    <set_variable name="energy_drop" value="1" integer="yes" />
+  </event>
+  <!-- Comms chatter reveals info about The Syndicate -->
+  <event name="GW 214 Bargain 1" id_arme="6cf251b0-0bb4-4ac8-8220-fe19c7acd0a1">
+    <if_exists name="GW Unlimited 214" />
+    <if_variable name="cigars" comparator="EQUALS" value="0.0" />
+    <if_distance name1="GW Unlimited 214" name2="Hamak Base" comparator="LESS_EQUAL" value="23000.0" />
+    <set_comms_button text="Chatter from GW 214" sideValue="2" />
+    <set_variable name="cigars" value="1" integer="yes" />
+  </event>
+  <event name="GW 214 Bargain 2" id_arme="64e3e38e-7169-414e-ab3d-1d55ad2bfd15">
+    <if_comms_button text="Chatter from GW 214" />
+    <if_variable name="cigars" comparator="EQUALS" value="1" />
+    <clear_comms_button text="Chatter from GW 214" sideValue="2" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\GW_214_bargain.wav" />
+    <set_timer name="bargain_timer" seconds="11" />
+    <set_variable name="cigars" value="2.0" integer="yes" />
+  </event>
+  <event name="GW 214 Bargain 3" id_arme="fe6cabe2-c12c-422f-9f7d-e5450518eb66">
+    <if_timer_finished name="bargain_timer" />
+    <if_variable name="cigars" comparator="EQUALS" value="2.0" />
+    <incoming_comms_text from="GW 214" sideValue="2" type="STATION FRIEND">Hamak Base, this is GW 214. We got a bargain price on some rare Kralien jewelry. We're also carrying cuban cigars, Irish whiskey, and a new Playdroid for the Big Guy. Prepare for docking.</incoming_comms_text>
+    <set_timer name="bargain_timer" seconds="4" />
+    <set_variable name="cigars" value="3.0" integer="yes" />
+  </event>
+  <event name="GW 214 Bargain 4" id_arme="cd5960a4-698c-4730-b3de-50c7e0524e6f">
+    <if_timer_finished name="bargain_timer" />
+    <if_variable name="cigars" comparator="EQUALS" value="3.0" />
+    <incoming_comms_text from="Hamak Base" sideValue="2" type="STATION FRIEND">Welcome, 214. The Big Guy sends his compliments.</incoming_comms_text>
+    <set_variable name="cigars" value="4.0" integer="yes" />
+  </event>
+  <event name="GW 214 Parks" id_arme="df5ad23a-9398-4c9a-aa20-c45ef5ce2a35">
+    <if_variable name="chapter" comparator="EQUALS" value="1" />
+    <if_exists name="GW Unlimited 214" />
+    <if_distance name1="GW Unlimited 214" name2="Hamak Base" comparator="LESS_EQUAL" value="500" />
+    <if_variable name="GW214parks" comparator="NOT" value="1.0" />
+    <add_ai type="POINT_THROTTLE" value1="12100" value2="0" value3="79900" value4=".1" name="GW Unlimited 214" />
+    <set_variable name="GW214parks" value="1.0" integer="yes" />
+  </event>
+  <event name="GW 157 Blood Money 1" id_arme="853ade25-a596-4672-9b56-7cad638fc1d4">
+    <if_exists name="GW Unlimited 157" />
+    <if_variable name="blood" comparator="EQUALS" value="0.0" />
+    <if_distance name1="GW Unlimited 157" name2="Hamak Base" comparator="LESS_EQUAL" value="23000.0" />
+    <set_comms_button text="Chatter from GW 157" />
+    <set_variable name="blood" value="1" integer="yes" />
+  </event>
+  <event name="GW 157 Blood Money 2" id_arme="0388e384-6d1d-4226-9972-1fdffc4303b8">
+    <if_comms_button text="Chatter from GW 157" />
+    <if_variable name="blood" comparator="EQUALS" value="1" />
+    <clear_comms_button text="Chatter from GW 157" sideValue="2" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\GW_157_blood.wav" />
+    <set_timer name="blood_timer" seconds="15" />
+    <set_variable name="blood" value="2.0" integer="yes" />
+  </event>
+  <event name="GW 157 Blood Money 3" id_arme="2201210c-2a4a-457c-a1ef-f6d42b2a4faf">
+    <if_timer_finished name="blood_timer" />
+    <if_variable name="blood" comparator="EQUALS" value="2.0" />
+    <incoming_comms_text from="GW 157" sideValue="2" type="FRIEND">This is Golf Whiskey One Five Seven calling Hamak Base. You won't believe this. We scored a shipment of human blood. During wartime, blood is worth more than gold. The Syndicate is gonna make a killing! Prepare for docking, and tell the Big Guy, my crew expects an extra share this month.</incoming_comms_text>
+    <set_timer name="blood_timer" seconds="12" />
+    <set_variable name="blood" value="3.0" integer="yes" />
+  </event>
+  <event name="GW 157 Blood Money 4" id_arme="3a3d3342-8d66-4eb9-9940-1831a58a9183">
+    <if_timer_finished name="blood_timer" />
+    <if_variable name="blood" comparator="EQUALS" value="3.0" />
+    <incoming_comms_text from="Admiral Weeks" sideValue="2" type="FRIEND">GW 157, this is Giles Weeks. I can always count on you boys to keep these profits flowing. Nice work!  You'll all get extra shares in the Syndicate. And this Christmas, you'll get a personal bonus from me.</incoming_comms_text>
+    <set_timer name="blood_timer" seconds="3" />
+    <set_variable name="blood" value="4.0" integer="yes" />
+  </event>
+  <event name="GW 157 Blood Money 5" id_arme="8c831119-e469-44d5-980a-afc5cadf340a">
+    <if_timer_finished name="blood_timer" />
+    <if_variable name="blood" comparator="EQUALS" value="4.0" />
+    <incoming_comms_text from="GW 157" sideValue="2" type="FRIEND">Thanks Admiral. That's just what I wanted to hear. </incoming_comms_text>
+    <set_variable name="blood" value="5.0" integer="yes" />
+  </event>
+  <event name="GW 157 Parks" id_arme="fb11563c-330c-406a-a57e-11977311edc8">
+    <if_variable name="chapter" comparator="EQUALS" value="1" />
+    <if_exists name="GW Unlimited 157" />
+    <if_distance name1="GW Unlimited 157" name2="Hamak Base" comparator="LESS_EQUAL" value="600" />
+    <if_variable name="GW157parks" comparator="NOT" value="1.0" />
+    <add_ai type="POINT_THROTTLE" value1="11900" value2="0" value3="79900" value4=".1" name="GW Unlimited 157" />
+    <set_variable name="GW157parks" value="1.0" integer="yes" />
+  </event>
+  <!-- Compliments from Captain Haynes as fleets 1, 2 and 3 are destroyed -->
+  <event name="Haynes Compliment 1" id_arme="db9ed323-bc3e-4a99-badd-a53f3831f93b">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="defeated_1" comparator="EQUALS" value="0.0" />
+    <if_exists name="Warsaw" />
+    <if_fleet_count comparator="LESS_EQUAL" value="0" fleetnumber="1" sideValue="1" />
+    <set_comms_button text="Still Kicking from Warsaw" sideValue="2" />
+    <set_variable name="defeated_1" value="1" integer="yes" />
+  </event>
+  <event name="Haynes Compliment 2" id_arme="58d4f890-bbb6-4853-b473-f797c8a19b31">
+    <if_variable name="defeated_1" comparator="EQUALS" value="1.0" />
+    <if_comms_button text="Still Kicking from Warsaw" />
+    <clear_comms_button text="Still Kicking from Warsaw" sideValue="2" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\Haynes_kick.wav" />
+    <set_timer name="text_timer" seconds="4" />
+    <set_variable name="defeated_1" value="2.0" integer="yes" />
+  </event>
+  <event name="Haynes Compliment 3" id_arme="c95b2bbd-304e-4b15-9700-7c0fe4dc8129">
+    <if_variable name="defeated_1" comparator="EQUALS" value="2.0" />
+    <if_timer_finished name="text_timer" />
+    <incoming_comms_text from="Captain Haynes on Warsaw" sideValue="2" type="FRIEND">Haynes to Artemis. Great job! You're really kicking Torgie butts.</incoming_comms_text>
+    <set_variable name="defeated_1" value="3.0" integer="yes" />
+  </event>
+  <event name="Haynes Compliment 4" id_arme="7c016d0c-e7ba-4d35-9251-1f9cbe91685d">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="defeated_2" comparator="EQUALS" value="0.0" />
+    <if_exists name="Warsaw" />
+    <if_fleet_count comparator="LESS_EQUAL" value="1" fleetnumber="2" sideValue="1" />
+    <set_comms_button text="Nice Shot from Warsaw" sideValue="2" />
+    <set_variable name="defeated_2" value="1" integer="yes" />
+  </event>
+  <event name="Haynes Compliment 5" id_arme="e7441581-c146-499b-bd90-c3c81b7ecd72">
+    <if_variable name="defeated_2" comparator="EQUALS" value="1.0" />
+    <if_comms_button text="Nice Shot from Warsaw" />
+    <clear_comms_button text="Nice Shot from Warsaw" sideValue="2" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\Haynes_shooting.wav" />
+    <set_timer name="text_timer" seconds="2" />
+    <set_variable name="defeated_2" value="2.0" integer="yes" />
+  </event>
+  <event name="Haynes Compliment 6" id_arme="31c59148-b700-4f15-854b-3ecfd7cecc0a">
+    <if_variable name="defeated_2" comparator="EQUALS" value="2.0" />
+    <if_timer_finished name="text_timer" />
+    <incoming_comms_text from="Captain Haynes on Warsaw" sideValue="2" type="FRIEND">Haynes to Artemis. Nice shot!</incoming_comms_text>
+    <set_variable name="defeated_2" value="3.0" integer="yes" />
+  </event>
+  <event name="Haynes Compliment 7" id_arme="c8ce3b80-4337-493f-b068-32cfd1d3d9ee">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="defeated_3" comparator="EQUALS" value="0.0" />
+    <if_exists name="Warsaw" />
+    <if_fleet_count comparator="LESS_EQUAL" value="0" fleetnumber="3" sideValue="1" />
+    <set_comms_button text="Having Fun from Warsaw" sideValue="2" />
+    <set_variable name="defeated_3" value="1" integer="yes" />
+  </event>
+  <event name="Haynes Compliment 8" id_arme="3e92f2d1-7296-40ba-a842-07c11aa67e3b">
+    <if_variable name="defeated_3" comparator="EQUALS" value="1" />
+    <if_comms_button text="Having Fun from Warsaw" />
+    <clear_comms_button text="Having Fun from Warsaw" sideValue="2" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\Haynes_fun.wav" />
+    <set_timer name="text_timer" seconds="0" />
+    <set_variable name="defeated_3" value="2.0" integer="yes" />
+  </event>
+  <event name="Haynes Compliment 9" id_arme="3dd237be-dabe-4107-9ac3-57cb7ac48cec">
+    <if_variable name="defeated_3" comparator="EQUALS" value="2.0" />
+    <if_timer_finished name="text_timer" />
+    <incoming_comms_text from="Captain Haynes on Warsaw" sideValue="2" type="FRIEND">Haynes to Artemis. You don't get to have all the fun. Save a few Torgies for us!</incoming_comms_text>
+    <set_variable name="defeated_3" value="3.0" integer="yes" />
+  </event>
+  <!-- Help Warsaw escape a tough situation -->
+  <!-- using The Haynes Maneuver -->
+  <event name="The Haynes Maneuver 1" id_arme="1c3f442d-4929-42b9-af6e-489c1bec52ba">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="Warsaw_running" comparator="NOT" value="1" />
+    <if_exists name="Warsaw" />
+    <if_object_property property="shieldStateBack" name="Warsaw" comparator="less" value="40" />
+    <set_object_property property="topSpeed" value="3" name="Warsaw" />
+    <set_object_property property="systemDamageImpulse" value="0" name="Warsaw" />
+    <set_object_property property="turnRate" value="1/12" name="Warsaw" />
+    <addto_object_property value="+60" property="positionY" name="Warsaw" />
+    <add_ai type="POINT_THROTTLE" value1="50000" value2="0" value3="50000" value4="1" name="Warsaw" />
+    <set_timer name="Warsaw_runs_timer" seconds="12" />
+    <set_variable name="Warsaw_running" value="1" integer="yes" />
+  </event>
+  <event name="The Haynes Maneuver 2" id_arme="dbdbb8d7-2e16-4e20-9755-cdb866b83d49">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="Warsaw_running" comparator="NOT" value="1" />
+    <if_exists name="Warsaw" />
+    <if_object_property property="shieldStateFront" name="Warsaw" comparator="less" value="40" />
+    <set_object_property property="topSpeed" value="3" name="Warsaw" />
+    <set_object_property property="systemDamageImpulse" value="0" name="Warsaw" />
+    <set_object_property property="turnRate" value="1/12" name="Warsaw" />
+    <addto_object_property value="+60" property="positionY" name="Warsaw" />
+    <add_ai type="POINT_THROTTLE" value1="50000" value2="0" value3="50000" value4="1" name="Warsaw" />
+    <set_timer name="Warsaw_runs_timer" seconds="12" />
+    <set_variable name="Warsaw_running" value="1" integer="yes" />
+  </event>
+  <event name="The Haynes Maneuver end" id_arme="675c6dab-bffe-470d-8b18-8bc5f8a3c74b">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_variable name="Warsaw_running" comparator="EQUALS" value="1" />
+    <if_exists name="Warsaw" />
+    <if_timer_finished name="Warsaw_runs_timer" />
+    <set_variable name="Warsaw_running" value="0" integer="yes" />
+    <set_object_property property="topSpeed" value="2.1" name="Warsaw" />
+    <set_object_property property="turnRate" value="1/100" name="Warsaw" />
+    <set_object_property property="positionY" value="0" name="Warsaw" />
+    <clear_ai name="Warsaw" />
+    <add_ai type="CHASE_AI_SHIP" value1="59000" value2="40000" name="Warsaw" />
+    <add_ai type="FOLLOW_COMMS_ORDERS" name="Warsaw" />
+    <add_ai type="DEFEND" value1="9000" value2="4000" name="Warsaw" />
+  </event>
+  <!-- Keep Warsaw from leaving to the north, south, east, or west -->
+  <event name="North Edge" id_arme="f4a1c0d3-fcc5-448e-9de1-0deaba438373">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_exists name="Warsaw" />
+    <if_object_property property="positionZ" name="Warsaw" comparator="less" value="800" />
+    <set_object_property property="positionZ" value="3000" name="Warsaw" />
+  </event>
+  <event name="East Edge" id_arme="9c1aae08-f88c-4a64-948a-3bb54f6e64b6">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_exists name="Warsaw" />
+    <if_object_property property="positionX" name="Warsaw" comparator="less" value="800" />
+    <set_object_property property="positionX" value="3000" name="Warsaw" />
+  </event>
+  <event name="South Edge" id_arme="1da5ccce-d259-40cd-b6f3-fb6ca7a08a84">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_exists name="Warsaw" />
+    <if_object_property property="positionZ" name="Warsaw" comparator="greater" value="99200" />
+    <set_object_property property="positionZ" value="97000" name="Warsaw" />
+  </event>
+  <event name="West Edge" id_arme="a906e640-961a-41e8-afa1-1c69c152aceb">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_exists name="Warsaw" />
+    <if_object_property property="positionX" name="Warsaw" comparator="greater" value="99200" />
+    <set_object_property property="positionX" value="97000" name="Warsaw" />
+  </event>
+  <!-- Winning and losing the mission -->
+  <event name="Victory" id_arme="d32d41a1-ecd1-4674-9fc4-c2cb61170b52">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_fleet_count comparator="EQUALS" value="0" sideValue="1" />
+    <if_variable name="terminate" comparator="NOT" value="1" />
+    <big_message title="VICTORY!" subtitle1="You drove away the Torgoths" subtitle2="and saved the sector." />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\Fanfare.wav" />
+    <set_timer name="endint_timer" seconds="25" />
+    <set_timer name="funny_timer" seconds="13" />
+    <create type="neutral" x="10000" y="0" z="97100" angle="345" name="Chicago" hullID="1501" sideValue="2" />
+    <clear_ai name="Chicago" />
+    <add_ai type="TARGET_THROTTLE" value1="1" targetName="Hamak Base" name="Chicago" />
+    <play_sound_now filename="dat\Missions\MISS_HamakSector\Weeks_last_line.wav" />
+    <warning_popup_message message="Admiral Weeks security credentials confirmed aboard Starship Chicago." consoles="S" player_slot="0" />
+    <set_variable name="terminate" value="1" integer="yes" />
+  </event>
+  <event name="Rimshot" id_arme="5e2eb76c-dda9-467f-94c9-9c821b32f10e">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_timer_finished name="funny_timer" />
+    <if_variable name="terminate" comparator="EQUALS" value="1" />
+    <if_variable name="funny" comparator="NOT" value="1" />
+    <big_message subtitle1="Maybe now you can" subtitle2="buy yourself a promotion." />
+    <set_object_property property="topSpeed" value="1" name="Chicago" />
+    <set_timer name="endint_timer" seconds="10" />
+    <set_variable name="funny" value="1" integer="yes" />
+  </event>
+  <event name="Defeat Base Destroyed" id_arme="ad983b4a-0f27-412d-8e56-ffa00425c5f8">
+    <if_variable name="chapter" comparator="EQUALS" value="3" />
+    <if_not_exists name="Hamak Base" />
+    <if_variable name="terminate" comparator="NOT" value="1" />
+    <big_message title="DEFEAT!" subtitle1="Hamak Base was destroyed and the" subtitle2="Torgoths conquered the sector." />
+    <set_timer name="endint_timer" seconds="10" />
+    <set_variable name="terminate" value="1" integer="yes" />
+  </event>
+  <event name="Defeat Artemis Destroyed" id_arme="529978f8-82a4-45be-891e-9ecc4eb8868a">
+    <if_not_exists player_slot="0" />
+    <if_variable name="terminate" comparator="NOT" value="1" />
+    <big_message title="DEFEAT!" subtitle1="You were destroyed and the" subtitle2="Torgoths conquered the sector." />
+    <set_timer name="endint_timer" seconds="10" />
+    <set_variable name="terminate" value="1" integer="yes" />
+  </event>
+  <event name="End Mission" id_arme="827b05d4-54d3-493c-9823-eacf877e12a5">
+    <if_variable name="terminate" comparator="EQUALS" value="1" />
+    <if_variable name="gameOver" comparator="NOT" value="1" />
+    <if_timer_finished name="endint_timer" />
+    <set_variable name="gameOver" value="1" integer="yes" />
+    <end_mission />
+  </event>
+  <!-- *******************************************************-->
+</mission_data>
